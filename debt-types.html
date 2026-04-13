@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>債務整理って何？任意整理・個人再生・自己破産の違いを、経験者が正直に解説します | しくじりマネー</title>
+<meta name="description" content="借金の返済が苦しい方へ。任意整理・個人再生・自己破産の3つの違いを、実際に債務整理を経験したミナミが正直に解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a18;
+    --ink-soft: #4a4540;
+    --ink-muted: #8a8078;
+    --cream: #faf7f2;
+    --cream-deep: #f0ebe2;
+    --warm: #c8956a;
+    --warm-light: #e8c9a8;
+    --warm-pale: #f5ede0;
+    --night: #2a2420;
+    --serif: 'Noto Serif JP', serif;
+    --sans: 'Noto Sans JP', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  .ad-notice {
+    background: var(--cream-deep);
+    border-bottom: 1px solid var(--warm-light);
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 32px 24px 0;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .site-logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .site-logo span { color: var(--warm); }
+
+  nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cream-deep);
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--warm); }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    max-width: 760px;
+    margin: 16px auto 0;
+    padding: 0 24px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: 11px;
+    color: var(--ink-muted);
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb a {
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb a:hover { color: var(--warm); }
+  .breadcrumb-sep { opacity: 0.5; }
+
+  /* ── ARTICLE LAYOUT ── */
+  .article-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 48px;
+    align-items: start;
+    margin-top: 32px;
+  }
+
+  @media (max-width: 680px) {
+    .article-wrap {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .sidebar { order: -1; }
+  }
+
+  /* ── ARTICLE MAIN ── */
+  .article-header { margin-bottom: 32px; }
+
+  .article-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--warm);
+    background: var(--warm-pale);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+
+  .article-title {
+    font-family: var(--serif);
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+  }
+
+  .article-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 12px;
+    color: var(--ink-muted);
+    flex-wrap: wrap;
+  }
+
+  .article-meta-author {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .meta-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--cream-deep);
+    overflow: hidden;
+    border: 1px solid var(--warm-light);
+  }
+
+  .meta-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article-body {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--ink-soft);
+  }
+
+  .article-body p { margin-bottom: 1.4em; }
+
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--ink);
+    margin: 2.4em 0 0.8em;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cream-deep);
+    letter-spacing: 0.04em;
+  }
+
+  .article-body h3 {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 1.8em 0 0.6em;
+    padding-left: 12px;
+    border-left: 3px solid var(--warm-light);
+  }
+
+  .article-body ul, .article-body ol {
+    padding-left: 1.4em;
+    margin-bottom: 1.4em;
+  }
+
+  .article-body li {
+    margin-bottom: 0.5em;
+  }
+
+  .article-body strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* 体験談ブロック */
+  .experience-block {
+    background: var(--warm-pale);
+    border-left: 3px solid var(--warm);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    margin: 2em 0;
+    font-size: 14px;
+    line-height: 2;
+    color: var(--ink-soft);
+  }
+
+  .experience-block .exp-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--warm);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  /* ミナミのひとこと */
+  .minami-note {
+    background: var(--night);
+    color: #e8e0d5;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 2.4em 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .minami-note::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    font-family: var(--serif);
+    font-size: 80px;
+    color: rgba(200,149,106,0.2);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .minami-note-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--warm-light);
+    opacity: 0.7;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .minami-note-body {
+    font-size: 13px;
+    line-height: 2;
+    color: rgba(232,224,213,0.85);
+    position: relative;
+    z-index: 1;
+  }
+
+  .minami-note-sig {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--warm-light);
+    opacity: 0.7;
+    text-align: right;
+  }
+
+  /* CTAブロック */
+  .cta-block {
+    border: 1px solid var(--warm-light);
+    border-radius: 10px;
+    padding: 28px;
+    margin: 2.4em 0;
+    text-align: center;
+    background: #fff;
+  }
+
+  .cta-block p {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--warm);
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .cta-btn:hover {
+    background: #b07850;
+    transform: translateY(-1px);
+  }
+
+  .cta-note {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-top: 8px;
+    margin-bottom: 0 !important;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    position: sticky;
+    top: 24px;
+  }
+
+  .sidebar-card {
+    background: #fff;
+    border: 1px solid var(--cream-deep);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--warm);
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .sidebar-minami {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .sidebar-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream-deep);
+    border: 2px solid var(--warm-light);
+    flex-shrink: 0;
+  }
+
+  .sidebar-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .sidebar-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--ink-muted);
+  }
+
+  .sidebar-name {
+    font-family: var(--serif);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .sidebar-role {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-top: 2px;
+  }
+
+  .sidebar-bio {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .sidebar-links a {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid var(--cream-deep);
+    border-radius: 6px;
+    transition: border-color 0.2s, color 0.2s;
+    letter-spacing: 0.04em;
+  }
+
+  .sidebar-links a:hover {
+    border-color: var(--warm-light);
+    color: var(--warm);
+  }
+
+  .related-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .related-item {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    line-height: 1.6;
+    padding-left: 10px;
+    border-left: 2px solid var(--cream-deep);
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .related-item:hover {
+    border-color: var(--warm);
+    color: var(--warm);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--night);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 32px 24px;
+    text-align: center;
+    margin-top: 64px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(232,224,213,0.5);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--warm-light); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(232,224,213,0.3);
+    letter-spacing: 0.08em;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .article-main { animation: fadeUp 0.6s ease both; }
+</style>
+</head>
+<body>
+
+<div class="ad-notice">PR・本サイトはアフィリエイト広告を含みます</div>
+
+<header>
+  <a href="/" class="site-logo">しくじり<span>マネー</span></a>
+  <nav>
+    <a href="/debt/">借金・債務整理</a>
+    <a href="/bankruptcy/">自己破産</a>
+    <a href="/money/">お金の立て直し</a>
+    <a href="/about/">ミナミについて</a>
+    <a href="/contact/">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="breadcrumb">
+  <a href="/">ホーム</a>
+  <span class="breadcrumb-sep">›</span>
+  <a href="/debt/">借金・債務整理</a>
+  <span class="breadcrumb-sep">›</span>
+  <span>債務整理って何？</span>
+</div>
+
+<div class="article-wrap">
+
+  <!-- ── MAIN ── -->
+  <main class="article-main">
+
+    <div class="article-header">
+      <span class="article-tag">借金・債務整理</span>
+      <h1 class="article-title">債務整理って何？任意整理・個人再生・自己破産の違いを、経験者が正直に解説します</h1>
+      <div class="article-meta">
+        <div class="article-meta-author">
+          <div class="meta-avatar">
+            <!-- <img src="/assets/minami-avatar.jpg" alt="ミナミ"> -->
+          </div>
+          <span>ミナミ</span>
+        </div>
+        <span>2026年4月</span>
+        <span>読了目安：約5分</span>
+      </div>
+    </div>
+
+    <div class="article-body">
+
+      <p>あなたは今、毎月の返済日が近づくたびに、スマホの通知を見るのが怖くなっていませんか？</p>
+
+      <p>「返しても返しても、元金が全然減らない」<br>「毎月ギリギリで、もう限界かもしれない」</p>
+
+      <p>そう感じながら、誰にも言えずに一人で抱えている方へ、この記事を書きました。</p>
+
+      <p>読み終わる頃には、借金を根本から解決する「債務整理」という制度の種類と、あなたの状況に近い選択肢が見えてくると思います。私も通ってきた道です。少しだけ、付き合ってもらえますか。</p>
+
+      <h2>債務整理は「人生を守るための、国が認めた制度」です</h2>
+
+      <p>最初にひとつだけ言わせてください。</p>
+      <p>債務整理は、逃げでも、恥ずかしいことでもありません。返せなくなる前に手を打つ——それは、これ以上自分の生活を壊さないための、ごく真っ当な判断です。</p>
+
+      <h2>1. 任意整理｜将来の利息をなくして、元金だけ返す</h2>
+
+      <p>裁判所を使わず、弁護士が直接カード会社や消費者金融と交渉してくれる方法です。「利息をゼロにして、元金だけを3〜5年で返せるようにしてください」とお願いするイメージです。</p>
+
+      <p><strong>向いている人</strong></p>
+      <ul>
+        <li>安定した収入があって、利息さえなくなれば完済できそうな人</li>
+        <li>家族や職場にはできるだけ知られたくない人</li>
+        <li>財産（車・貯金など）を手放したくない人</li>
+      </ul>
+
+      <p><strong>正直なデメリットも言うと</strong></p>
+      <ul>
+        <li>対象にしたカードや口座はその後使えなくなります</li>
+        <li>信用情報（いわゆるブラックリスト）に5年ほど残ります</li>
+      </ul>
+
+      <h2>2. 個人再生｜借金の総額を大幅に減らして、残りを返す</h2>
+
+      <p>裁判所を通して、借金の総額を最大で5分の1程度まで圧縮し、それを3年かけて返していく方法です。</p>
+      <p>住宅ローン特則という仕組みがあって、住宅ローン以外の借金を減らしながら家を維持できるのが、この制度の大きな特徴です。</p>
+
+      <h2>3. 自己破産｜すべての借金の返済義務をなくす</h2>
+
+      <p>裁判所に認めてもらうことで、税金などを除くすべての借金がゼロになる方法です。「破産」という言葉の響きが怖いのはわかります。私も同じでした。でも実際に経験してみると、思っていたよりずっと「その後の生活」はあります。</p>
+
+      <h2>ミナミの話｜何度同じことを聞いても、嫌な顔一つしなかった</h2>
+
+      <div class="experience-block">
+        <span class="exp-label">MINAMI'S STORY</span>
+        <p>私が20代で初めて弁護士事務所に相談した時、事務所のドアを開けるのに5分くらいかかりました（笑）。</p>
+        <p>そして案の定、「任意整理と自己破産、私の場合はどっちがいいんですか」「本当に家族に知られませんか」「他に何か怖いことはないですか」って、ほとんど同じ質問を形を変えながら何度も聞いてしまったんです。</p>
+        <p>でもその先生は、一度も嫌な顔をしませんでした。図を描きながら「今の状態ならこの方法が一番生活を立て直しやすいですよ」と、何度でも丁寧に説明してくれて。あの時「この人に任せていいんだ」と思えたから、私は動けました。</p>
+      </div>
+
+      <h2>まとめ</h2>
+
+      <ul>
+        <li><strong>任意整理</strong>｜利息をカットして地道に返したい人向け</li>
+        <li><strong>個人再生</strong>｜家を守りながら借金を大幅に減らしたい人向け</li>
+        <li><strong>自己破産</strong>｜返済が不可能で、ゼロからやり直したい人向け</li>
+      </ul>
+
+      <p>次のステップとして、まず「自分の状況ならどの制度が使えるか」をプロに聞いてみることをすすめます。一人でどれだけ調べても、自分のケースに当てはまるかどうかは、話してみないとわからないことが多いですよ。</p>
+
+      <div class="cta-block">
+        <p>まず話すだけでいい。費用は一切かかりません。</p>
+        <a href="#" class="cta-btn">無料で相談してみる →</a>
+        <p class="cta-note">※ 外部の弁護士・司法書士事務所のページに移動します</p>
+      </div>
+
+      <div class="minami-note">
+        <span class="minami-note-label">MINAMI'S NOTE</span>
+        <p class="minami-note-body">「弁護士に相談」って聞くと、なんか大ごとすぎてドキドキしますよね。わかります、私もそうでした（笑）。でも向こうはそれが仕事のプロだから、どんなに「初歩的な話」でも全然大丈夫なんですよ。風邪をひいた時に病院へ行くくらいの気持ちで、ドア開けてみてください。ここまで読んでくれてありがとう。</p>
+        <p class="minami-note-sig">— ミナミ</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar">
+
+    <div class="sidebar-card">
+      <span class="sidebar-label">ABOUT MINAMI</span>
+      <div class="sidebar-minami">
+        <div class="sidebar-avatar">
+          <!-- <img src="/assets/minami-avatar.jpg" alt="ミナミ"> -->
+          <div class="sidebar-avatar-placeholder">M</div>
+        </div>
+        <div>
+          <p class="sidebar-name">ミナミ（美波）</p>
+          <p class="sidebar-role">元スピリチュアル鑑定士</p>
+        </div>
+      </div>
+      <p class="sidebar-bio">20代で債務整理、30歳で自己破産を経験。その経験をもとに、お金で悩む方に寄り添う発信をしています。</p>
+      <div class="sidebar-links">
+        <a href="/about/">くわしいプロフィールを読む</a>
+        <a href="https://www.youtube.com/@shikujiri-money" target="_blank" rel="noopener">▶ YouTube でミナミの声を聞く</a>
+        <a href="https://www.tiktok.com/@shikujiri_money" target="_blank" rel="noopener">◈ TikTok をフォローする</a>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <span class="sidebar-label">RELATED</span>
+      <div class="related-list">
+        <a href="/bankruptcy/after-life/" class="related-item">自己破産したら人生終わり？破産後の生活を正直に話します</a>
+        <a href="/about/story/" class="related-item">元カレの借金を背負った私が、自己破産までした話</a>
+        <a href="/debt/simulation/" class="related-item">無料で状況を確認する</a>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/about/">このサイトについて</a>
+    <a href="/privacy/">プライバシーポリシー</a>
+    <a href="/disclaimer/">免責事項</a>
+    <a href="/contact/">お問い合わせ</a>
+  </div>
+  <p class="footer-copy">© 2026 しくじりマネー · 本サイトはアフィリエイト広告を含みます</p>
+</footer>
+
+</body>
+</html>
