@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>任意整理とは？手続きの流れと費用をミナミが体験談を交えて解説 | しくじりマネー</title>
+<meta name="description" content="任意整理の手続きの流れ・費用・メリットを、実際に任意整理を経験したミナミが体験談を交えて解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a18;
+    --ink-soft: #4a4540;
+    --ink-muted: #8a8078;
+    --cream: #faf7f2;
+    --cream-deep: #f0ebe2;
+    --warm: #c8956a;
+    --warm-light: #e8c9a8;
+    --warm-pale: #f5ede0;
+    --night: #2a2420;
+    --serif: 'Noto Serif JP', serif;
+    --sans: 'Noto Sans JP', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  .ad-notice {
+    background: var(--cream-deep);
+    border-bottom: 1px solid var(--warm-light);
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  header {
+    padding: 40px 24px 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .site-logo {
+    font-family: var(--serif);
+    font-size: clamp(22px, 5vw, 28px);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+    display: block;
+  }
+
+  .site-logo span { color: var(--warm); }
+
+  .site-tagline {
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cream-deep);
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--warm); }
+
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .article-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--warm);
+    background: var(--warm-pale);
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .article-title {
+    font-family: var(--serif);
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+  }
+
+  .minami-card {
+    background: var(--warm-pale);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid var(--warm-light);
+    margin-bottom: 40px;
+  }
+
+  .minami-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream-deep);
+    border: 2px solid #fff;
+  }
+
+  .minami-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .minami-name {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+
+  .minami-role {
+    font-size: 11px;
+    color: var(--warm);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .minami-text {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  .affiliate-box {
+    background: #fff;
+    border: 1px solid var(--warm-light);
+    border-left: 3px solid var(--warm);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 32px 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .affiliate-box a {
+    color: var(--warm);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cream-deep);
+    letter-spacing: 0.04em;
+  }
+
+  .article-body h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 28px 0 10px;
+    color: var(--ink-soft);
+  }
+
+  .article-body p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: var(--ink-soft);
+  }
+
+  .article-body ul {
+    margin: 0 0 20px 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+
+  .article-body strong { color: var(--ink); font-weight: 500; }
+
+  .banner-wrap { text-align: center; margin: 40px 0; }
+
+  footer {
+    background: var(--night);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(232,224,213,0.5);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--warm-light); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(232,224,213,0.3);
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 480px) {
+    .minami-card { grid-template-columns: 1fr; }
+    .minami-avatar { margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ad-notice">PR・本サイトはアフィリエイト広告を含みます</div>
+
+<header>
+  <a href="/" class="site-logo">しくじり<span>マネー</span></a>
+  <p class="site-tagline">お金で失敗した私が、あなたに伝えたいこと</p>
+  <nav>
+    <a href="/debt-types.html">借金・債務整理</a>
+    <a href="/after-bankruptcy.html">自己破産</a>
+    <a href="/money/">お金の立て直し</a>
+    <a href="/minami-story.html">ミナミについて</a>
+    <a href="/contact/">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="article-wrap">
+
+  <span class="article-tag">借金・債務整理</span>
+  <h1 class="article-title">任意整理とは？<br>手続きの流れと費用をミナミが体験談を交えて解説</h1>
+
+  <div class="minami-card">
+    <div class="minami-avatar">
+      <img src="/assets/minami-cat.jpg" alt="ミナミ">
+    </div>
+    <div>
+      <p class="minami-name">ミナミ（美波）</p>
+      <p class="minami-role">元スピリチュアル鑑定士 / しくじり経験者</p>
+      <p class="minami-text">20代の頃、恋愛に盲信的になっていたことで借金が膨らみ、任意整理を経験しました。当時は知識も何もなく、ただただ不安で頭がいっぱいだったのを覚えています。</p>
+    </div>
+  </div>
+
+  <!-- LINK-A -->
+  <div class="affiliate-box">
+    まず話だけ聞いてみる →
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+    <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+  </div>
+
+  <div class="article-body">
+
+    <h2>1. 任意整理は「話し合い」で解決を目指す手続き</h2>
+    <p>「債務整理」という言葉を聞くと、真っ先に自己破産をイメージする方も多いかもしれません。ですが、実際には「任意整理」という方法が、解決の選択肢としてよく選ばれているようです。</p>
+    <p>任意整理は、裁判所を通さずに進める手続きです。弁護士や司法書士といった専門家が、あなたの代わりにカード会社などと直接話し合いをしてくれます。</p>
+    <p>具体的には、「これからかかる予定の利息をカットしてもらい、元金だけを数年かけて分割で返していく」というような内容で合意を目指すのが一般的とされています。</p>
+    <p>借金がすべて消えるわけではありませんが、利息がなくなるだけで、完済というゴールが現実的に見えてくるケースも多いようです。</p>
+
+    <h2>2. 任意整理の大きなメリットと、私の実体験</h2>
+    <p>任意整理には、生活を守りながら解決を目指せる柔軟な特徴があります。</p>
+
+    <h3>家族や周囲に気づかれにくい</h3>
+    <p>債務整理の中でも、家や職場にバレるリスクが低いという理由で、任意整理を選ぶ人が多いようです。裁判所からの通知が自宅に届くといったことがないため、周囲に知られずに手続きを終えられるケースが多いと言われています。私も、親や当時の職場にバレることはありませんでした。</p>
+
+    <h3>整理する借金を選べる（私の実体験）</h3>
+    <p>当時、私は仕事で車を使っていたので、車がなくなると収入が途絶えてしまう状況でした。そのため、車のローンだけは除いて手続きをしました。このように、どうしても守りたい理由がある財産については、その支払いだけを外して他の借金を整理できる可能性があるのは、任意整理の強みだと聞いています。</p>
+
+    <h2>3. 手続きの流れはどのように進むの？</h2>
+    <p>私が実際に体験した際の流れをご紹介します。あくまで一つの例として参考にしてみてください。</p>
+
+    <h3>① 専門家への相談</h3>
+    <p>ネットで調べても自分のケースに当てはまる答えは全く出せなかったので、思い切って無料相談に行きました。そこで初めて「私の状況なら任意整理という道がある」と教えてもらったんです。</p>
+
+    <h3>② 受任通知の送付</h3>
+    <p>依頼をすると、専門家から「受任通知」という書類が各社に送られます。これにより、業者からの直接の連絡が止まります。「ほんの少し前に進めたかな」という気持ちにはなりましたが、当時はまだ実感がわかず、心が不安定だったのを覚えています。</p>
+
+    <h3>③ 債務額の調査と交渉</h3>
+    <p>専門家が借金の額を正確に調べ直し、カード会社などと「将来の利息をゼロにして、元金を60回（5年）払いにする」といったような内容で交渉が進められるケースが多いようです。</p>
+
+    <h3>④ 和解成立・返済スタート</h3>
+    <p>交渉がまとまれば、和解成立です。あとは決まった金額を毎月コツコツと返していきます。私の場合は、膨れ上がっていた毎月の返済額が減り、なんとか自力で返していける金額に落ち着きました。</p>
+
+    <h2>4. 気になる「費用」はどのくらいかかる？</h2>
+    <p>「手元にお金がないのに、費用なんて払えるわけがない」と、私も当時は絶望的な気持ちでした。ですが、多くの事務所では費用の分割払いに対応しているようです。費用の目安としては、一般的に以下のような項目が挙げられます。</p>
+    <ul>
+      <li>着手金・解決報酬金：借入先1社につき数万円程度</li>
+      <li>減額報酬：減らせた金額の数％程度（※事務所によります）</li>
+    </ul>
+    <p>「今の返済を止めている間に、その分を弁護士費用に充てる」といった調整をしてくれる事務所も多いと聞いています。これから払い続けるはずだった利息を考えれば、結果的に負担が軽くなるケースが一般的とされているようです。</p>
+
+    <!-- LINK-B -->
+    <div class="affiliate-box">
+      自分にどれが向いているか、無料で確認できます →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <h2>5. 任意整理に向いているのはこんな人</h2>
+    <p>任意整理は、以下のような状況の方に検討されるケースが多いようです。</p>
+    <ul>
+      <li>安定した収入があり、利息がなくなれば数年で返せそうな人</li>
+      <li>仕事のために車などのローンだけは残したい人</li>
+      <li>周囲に知られるリスクをできるだけ下げて解決したい人</li>
+    </ul>
+    <p>一方で、借金の総額があまりに大きい場合などは、別の手続きを勧められることもあるようです。このあたりの判断は、自分でいくら計算しても答えは出ませんでした。</p>
+
+    <h2>6. まとめ：相談するまで、答えは全く出せなかった</h2>
+    <p>「自分でなんとかしなきゃ」と思って、夜な夜なスマホで計算機を叩いてはため息をつく。そんな日々を私も過ごしてきました。でも、自分一人で悩んでいても私も弁護士に相談するまで、自分の力では全く答えが出せなかったのが事実です。プロの視点で数字を整理してもらったとき、ようやく「こうすればいいんだ」という道筋が見えました。</p>
+    <p>私も当時は怖くてたまらなかった。でも、専門家に相談してようやく「自分にできること」が分かり、止まっていた時間が動き出したように感じています。あなたも、まずは今の状況を誰かに話してみることから始めてみませんか。</p>
+
+    <!-- LINK-C -->
+    <div class="affiliate-box">
+      まずは無料相談だけでもいい →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <!-- バナー -->
+    <div class="banner-wrap">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+631SX" rel="nofollow">
+        <img border="0" width="468" height="60" alt="" src="https://www20.a8.net/svt/bgt?aid=260401157352&wid=001&eno=01&mid=s00000020704001022000&mc=1">
+      </a>
+      <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+631SX" alt="">
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/minami-story.html">このサイトについて</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/disclaimer.html">免責事項</a>
+  </div>
+  <p class="footer-copy">© 2026 しくじりマネー · 本サイトはアフィリエイト広告を含みます</p>
+</footer>
+
+</body>
+</html>
