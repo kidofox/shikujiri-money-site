@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>借金はいくらから相談できる？「少額だから無理」は思い込みだった | しくじりマネー</title>
+<meta name="description" content="「少額だから相談できない」と思っていたミナミが、実際に相談してみて気づいたこと。専門家との会話を再現しながら、借金相談の本当のハードルをお伝えします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a18; --ink-soft: #4a4540; --ink-muted: #8a8078;
+    --cream: #faf7f2; --cream-deep: #f0ebe2;
+    --warm: #c8956a; --warm-light: #e8c9a8; --warm-pale: #f5ede0;
+    --night: #2a2420;
+    --serif: 'Noto Serif JP', serif; --sans: 'Noto Sans JP', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.8; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E"); pointer-events: none; z-index: 999; opacity: 0.6; }
+  .ad-notice { background: var(--cream-deep); border-bottom: 1px solid var(--warm-light); text-align: center; padding: 6px 16px; font-size: 11px; color: var(--ink-muted); letter-spacing: 0.05em; }
+  header { padding: 40px 24px 0; max-width: 720px; margin: 0 auto; }
+  .site-logo { font-family: var(--serif); font-size: clamp(22px, 5vw, 28px); font-weight: 400; letter-spacing: 0.08em; color: var(--ink); text-decoration: none; display: block; }
+  .site-logo span { color: var(--warm); }
+  .site-tagline { font-size: 12px; color: var(--ink-muted); letter-spacing: 0.12em; margin-top: 4px; }
+  nav { display: flex; gap: 24px; margin-top: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--cream-deep); flex-wrap: wrap; }
+  nav a { font-size: 13px; color: var(--ink-soft); text-decoration: none; letter-spacing: 0.06em; transition: color 0.2s; }
+  nav a:hover { color: var(--warm); }
+  .article-wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .article-tag { display: inline-block; font-size: 10px; letter-spacing: 0.1em; color: var(--warm); background: var(--warm-pale); padding: 2px 10px; border-radius: 20px; margin-bottom: 16px; }
+  .article-title { font-family: var(--serif); font-size: clamp(22px, 4vw, 30px); font-weight: 400; line-height: 1.6; letter-spacing: 0.04em; margin-bottom: 32px; }
+  .minami-card { background: var(--warm-pale); border-radius: 12px; padding: 24px 28px; display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: center; border: 1px solid var(--warm-light); margin-bottom: 40px; }
+  .minami-avatar { width: 64px; height: 64px; border-radius: 50%; overflow: hidden; background: var(--cream-deep); border: 2px solid #fff; }
+  .minami-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .minami-name { font-family: var(--serif); font-size: 15px; font-weight: 400; margin-bottom: 2px; }
+  .minami-role { font-size: 11px; color: var(--warm); letter-spacing: 0.08em; margin-bottom: 8px; }
+  .minami-text { font-size: 13px; color: var(--ink-soft); line-height: 1.9; }
+  .affiliate-box { background: #fff; border: 1px solid var(--warm-light); border-left: 3px solid var(--warm); border-radius: 8px; padding: 16px 20px; margin: 32px 0; font-size: 13px; color: var(--ink-soft); }
+  .affiliate-box a { color: var(--warm); font-weight: 500; text-decoration: underline; }
+  .article-body h2 { font-family: var(--serif); font-size: 20px; font-weight: 400; margin: 48px 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--cream-deep); letter-spacing: 0.04em; }
+  .article-body h3 { font-size: 15px; font-weight: 500; margin: 28px 0 10px; color: var(--ink-soft); }
+  .article-body p { font-size: 14px; line-height: 2; margin-bottom: 20px; color: var(--ink-soft); }
+  .article-body ul { margin: 0 0 20px 20px; font-size: 14px; color: var(--ink-soft); line-height: 2; }
+  .article-body strong { color: var(--ink); font-weight: 500; }
+  /* 会話ボックス */
+  .dialogue-box {
+    background: #fff;
+    border: 1px solid var(--cream-deep);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 28px 0;
+    font-size: 14px;
+    line-height: 2;
+    color: var(--ink-soft);
+  }
+  .dialogue-box .speaker-minami { color: var(--ink); font-weight: 500; margin-bottom: 4px; }
+  .dialogue-box .speaker-staff { color: var(--warm); font-weight: 500; margin-bottom: 4px; }
+  .dialogue-box .inner-voice { font-size: 13px; color: var(--ink-muted); font-style: italic; margin: 8px 0 16px; padding-left: 12px; border-left: 2px solid var(--cream-deep); }
+  .dialogue-box p { margin-bottom: 16px; }
+  .dialogue-box p:last-child { margin-bottom: 0; }
+  .banner-wrap { text-align: center; margin: 40px 0; }
+  footer { background: var(--night); border-top: 1px solid rgba(255,255,255,0.05); padding: 32px 24px; text-align: center; }
+  .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .footer-links a { font-size: 12px; color: rgba(232,224,213,0.5); text-decoration: none; letter-spacing: 0.06em; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--warm-light); }
+  .footer-copy { font-size: 11px; color: rgba(232,224,213,0.3); letter-spacing: 0.08em; }
+  @media (max-width: 480px) { .minami-card { grid-template-columns: 1fr; } .minami-avatar { margin: 0 auto; } }
+</style>
+</head>
+<body>
+
+<div class="ad-notice">PR・本サイトはアフィリエイト広告を含みます</div>
+
+<header>
+  <a href="/" class="site-logo">しくじり<span>マネー</span></a>
+  <p class="site-tagline">お金で失敗した私が、あなたに伝えたいこと</p>
+  <nav>
+    <a href="/debt-types.html">借金・債務整理</a>
+    <a href="/after-bankruptcy.html">自己破産</a>
+    <a href="/money/">お金の立て直し</a>
+    <a href="/minami-story.html">ミナミについて</a>
+    <a href="/contact/">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="article-wrap">
+
+  <span class="article-tag">借金・債務整理</span>
+  <h1 class="article-title">借金はいくらから相談できる？<br>「少額だから無理」は思い込みだった</h1>
+
+  <div class="minami-card">
+    <div class="minami-avatar">
+      <img src="/assets/minami-cat.jpg" alt="ミナミ">
+    </div>
+    <div>
+      <p class="minami-name">ミナミ（美波）</p>
+      <p class="minami-role">元スピリチュアル鑑定士 / しくじり経験者</p>
+      <p class="minami-text">「少額だから相談できない」と思い込んでいた私が、実際に相談してみて気づいたこと。当時のやり取りを、記憶をもとに再現しています。</p>
+    </div>
+  </div>
+
+  <!-- LINK-A -->
+  <div class="affiliate-box">
+    まず話だけ聞いてみる →
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+    <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+  </div>
+
+  <div class="article-body">
+
+    <h2>1. 「これくらいの金額で大騒ぎするなんて」と思っていた頃の私</h2>
+    <p>「借金が数百万、数千万あるならまだしも、私くらいの状況で専門家に相談するなんて……」専門家の話を聞くまでの私は、本気でそう思っていました。当時の私の借金は、世間一般で言う「破産レベル」の莫大な金額ではありませんでした。でも、毎月の返済額はジワジワと生活を圧迫し、心は確実に削られていたんです。</p>
+    <p>「もっと大変な人はたくさんいる」「これくらい自分でなんとかしなきゃダメ人間だ」——そう自分を責めて、専門家の門を叩くのをずっと躊躇していました。今思えば、その「恥ずかしい」という思い込みこそが、私を一番苦しめていた呪いだったのかもしれません。</p>
+    <p>勇気を出して相談に行った日のことを、私の記憶をもとに再現してみますね。同じように悩んでいるあなたに、あの時の心の変化が伝われば嬉しいです。</p>
+
+    <h2>2. 相談室でのやり取り：担当者の方が教えてくれたこと</h2>
+    <p>相談室の椅子に座り、私は恥ずかしさで下を向きながら、絞り出すような声で自分の状況を話しました。</p>
+
+    <div class="dialogue-box">
+      <p><span class="speaker-minami">ミナミ：</span>「……あの、実は相談に来ること自体、すごく迷っていました。世の中にはもっと大変な人がたくさんいるのに、私くらいの状況で専門家の方の手を煩わせるなんて、恥ずかしくて……」</p>
+      <p><span class="speaker-staff">担当者の方：</span>「そうおっしゃる方は実はとても多いんですよ。でも、私たちから見れば、状況の重さに『相談していい基準』なんてどこにもないと考えています」</p>
+      <p><span class="speaker-minami">ミナミ：</span>「えっ、でも私くらいの額なら、普通は自分でなんとかすべきですよね？」</p>
+      <p><span class="speaker-staff">担当者の方：</span>「『普通』なんて気にしなくていいんです。大切なのは、今のあなたの収入に対して、その返済がどれだけ生活を苦しめているか。そこが一番のポイントだと言われています。ご本人が『生活が苦しい』と感じているなら、それはもう立派な『専門家の助けが必要なサイン』のケースが多いようです」</p>
+      <p class="inner-voice">金額の多寡じゃなくて、私の今の「苦しさ」を見ていいんだ……。その言葉だけで、喉の奥がツンとしたのを覚えています。</p>
+      <p><span class="speaker-staff">担当者の方：</span>「むしろ、もっと早い段階で来ていただければ、選べる選択肢も多かったかもしれません。傷口が浅いうちに手を打つことは、今後の生活を守るための賢明な判断だと言えるのではないでしょうか」</p>
+    </div>
+
+    <h2>3. 担当者に言われて知った「新たな考え方」</h2>
+    <p>その日の相談で、私がそれまで抱いていた借金への考え方は大きく変わりました。特に、プロの視点から教わった以下の3つの考え方は、私にとって新鮮な驚きでした。</p>
+
+    <h3>「金額」ではなく「生活のバランス」</h3>
+    <p>借金がいくらであっても、今の生活で利息しか返せていないのなら、それは解決すべき問題だと言われました。「いくら借りているか」より「いつ終わる見通しが立っているか」の方が、再建を考える上では重要だそうです。</p>
+
+    <h3>利息という「終わりのないマラソン」</h3>
+    <p>担当者の方はこうも教えてくれました。「任意整理などの手続きは、借金の額を減らすだけでなく、将来かかるはずだった『利息』をカットできる可能性があるんです。少額であっても、何年も利息を払い続けるコストを考えれば、今手続きをするメリットは小さくないかもしれません」</p>
+
+    <h3>プロは「困っている人」を笑わない</h3>
+    <p>一番怖かったのは「そんなことで来るな」と呆れられることでした。でも、担当者の方は淡々と、かつ親身に数字を整理してくれました。「恥ずかしくて隠し続けることが一番のリスクですよ」という言葉に、ようやく自分の弱さと向き合う勇気をもらえました。</p>
+
+    <!-- LINK-B -->
+    <div class="affiliate-box">
+      少額でも相談できるか、無料で確認できます →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <h2>4. ひとりで抱え続けるのが、一番の「しくじり」</h2>
+    <p>あの時、相談に行って分かったことがあります。それは、借金の問題を解決するのに「早すぎる」なんてことは絶対にない、ということです。むしろ、「まだ大丈夫」と自分に言い聞かせているうちに、利息で雪だるま式に膨らんだり、無理な返済のせいで生活が破綻したりすることこそが、一番避けるべき事態ではないでしょうか。</p>
+    <p>一度「プロに任せて、解決へのレールに乗る」と決めることができれば、思考は「返済の苦しみ」から「これからの生活をどう作るか」という前向きなものに切り替わります。そのマインドの切り替えこそが、現実を変える第一歩になるんです。</p>
+
+    <h2>5. まとめ：その一歩が、新しい人生への出発点</h2>
+    <p>もしあなたが今、「こんな程度の状況で相談していいのかな」と迷っているなら、どうか私の体験を思い出してください。答えはシンプルです。あなたが「苦しい」と感じているなら、それは相談していいタイミングなんです。</p>
+    <p>誰かに話すことで、初めて見える出口があります。あなたの生活を、そして何よりあなたの心をこれ以上すり減らさないために、まずはプロの視点を借りてみませんか？</p>
+
+    <!-- LINK-C -->
+    <div class="affiliate-box">
+      まずは無料相談だけでもいい →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <!-- バナー -->
+    <div class="banner-wrap">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+631SX" rel="nofollow">
+        <img border="0" width="468" height="60" alt="" src="https://www20.a8.net/svt/bgt?aid=260401157352&wid=001&eno=01&mid=s00000020704001022000&mc=1">
+      </a>
+      <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+631SX" alt="">
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/minami-story.html">このサイトについて</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/disclaimer.html">免責事項</a>
+  </div>
+  <p class="footer-copy">© 2026 しくじりマネー · 本サイトはアフィリエイト広告を含みます</p>
+</footer>
+
+</body>
+</html>
