@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>任意整理後、ローンは何年組めない？｜しくじりマネー</title>
+<meta name="description" content="任意整理後にローンが組めない期間は「完済から5年」が目安。正確な期間と、ローン復活を早めるための対策をわかりやすく解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a18;
+    --ink-soft: #4a4540;
+    --ink-muted: #8a8078;
+    --cream: #faf7f2;
+    --cream-deep: #f0ebe2;
+    --warm: #c8956a;
+    --warm-light: #e8c9a8;
+    --warm-pale: #f5ede0;
+    --night: #2a2420;
+    --serif: 'Noto Serif JP', serif;
+    --sans: 'Noto Sans JP', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  .ad-notice {
+    background: var(--cream-deep);
+    border-bottom: 1px solid var(--warm-light);
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  header {
+    padding: 40px 24px 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .site-logo {
+    font-family: var(--serif);
+    font-size: clamp(22px, 5vw, 28px);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+    display: block;
+  }
+
+  .site-logo span { color: var(--warm); }
+
+  .site-tagline {
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cream-deep);
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--warm); }
+
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .article-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--warm);
+    background: var(--warm-pale);
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .article-title {
+    font-family: var(--serif);
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+  }
+
+  .minami-card {
+    background: var(--warm-pale);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid var(--warm-light);
+    margin-bottom: 40px;
+  }
+
+  .minami-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream-deep);
+    border: 2px solid #fff;
+  }
+
+  .minami-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .minami-name {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+
+  .minami-role {
+    font-size: 11px;
+    color: var(--warm);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .minami-text {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  .affiliate-box {
+    background: #fff;
+    border: 1px solid var(--warm-light);
+    border-left: 3px solid var(--warm);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 32px 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .affiliate-box a {
+    color: var(--warm);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cream-deep);
+    letter-spacing: 0.04em;
+  }
+
+  .article-body h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 28px 0 10px;
+    color: var(--ink-soft);
+  }
+
+  .article-body p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: var(--ink-soft);
+  }
+
+  .article-body ul {
+    margin: 0 0 20px 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+
+  .article-body strong { color: var(--ink); font-weight: 500; }
+
+  .article-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 24px 0 32px;
+  }
+
+  .article-table th {
+    background: var(--warm-pale);
+    color: var(--ink-soft);
+    font-weight: 500;
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid var(--warm-light);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .article-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--cream-deep);
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .article-table tr:nth-child(even) td { background: var(--cream); }
+
+  .banner-wrap { text-align: center; margin: 40px 0; }
+
+  footer {
+    background: var(--night);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(232,224,213,0.5);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--warm-light); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(232,224,213,0.3);
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 480px) {
+    .minami-card { grid-template-columns: 1fr; }
+    .minami-avatar { margin: 0 auto; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJKN0FFSY1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FJKN0FFSY1');
+</script>
+</head>
+<body>
+
+<div class="ad-notice">PR・本サイトはアフィリエイト広告を含みます</div>
+
+<header>
+  <a href="/" class="site-logo">しくじり<span>マネー</span></a>
+  <p class="site-tagline">お金で失敗した私が、あなたに伝えたいこと</p>
+  <nav>
+    <a href="/debt-types.html">借金・債務整理</a>
+    <a href="/after-bankruptcy.html">自己破産</a>
+    <a href="/money/">お金の立て直し</a>
+    <a href="/minami-story.html">ミナミについて</a>
+    <a href="/contact/">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="article-wrap">
+
+  <span class="article-tag">任意整理・よくある疑問</span>
+  <h1 class="article-title">任意整理後、ローンは<br>何年組めない？</h1>
+
+  <div class="minami-card">
+    <div class="minami-avatar">
+      <img src="/assets/minami-cat.jpg" alt="ミナミ">
+    </div>
+    <div>
+      <p class="minami-name">ミナミ（美波）</p>
+      <p class="minami-role">元スピリチュアル鑑定士 / しくじり経験者</p>
+      <p class="minami-text">20代で債務整理、30歳で自己破産を経験。「これからローンが組めなくなる」という不安は、私も手続き前に何度も頭をよぎりました。正しい期間と対策を知ることで、前に進めるはずです。</p>
+    </div>
+  </div>
+
+  <!-- LINK-A -->
+  <div class="affiliate-box">
+    まず話だけ聞いてみる →
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+    <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+  </div>
+
+  <div class="article-body">
+
+    <p>任意整理を検討する際、多くの方が懸念されるのが「ローンへの影響」です。住宅ローンや車のローンなど、将来のライフプランにいつから復帰できるのか、正確な期間と対策を整理しました。</p>
+    <p>「一生ローンが組めない」ということはありません。仕組みを正しく理解し、完済に向けた一歩を踏み出すことが、結果としてローン利用への最短ルートになります。</p>
+
+    <h2>1. ローンが組めない期間は「完済から5年」が目安</h2>
+    <p>任意整理をすると、信用情報機関に事故情報が登録されます。この期間中は、新規のローン審査に通るのが難しいのが現実です。</p>
+
+    <h3>事故情報が消えるまでの期間</h3>
+    <p>任意整理の場合、情報の保有期間は<strong>「完済から5年」</strong>が一般的な目安です。</p>
+
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>信用情報機関</th>
+          <th>保有期間の目安</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>JICC（日本信用情報機構）</td>
+          <td>完済（契約終了）から5年</td>
+        </tr>
+        <tr>
+          <td>CIC（シー・アイ・シー）</td>
+          <td>完済（契約終了）から5年</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>手続きを開始してからではなく、「借金をすべて返し終わった日」からカウントが始まる点に注意が必要です。返済期間が3年であれば、その後の5年を合わせて、合計8年程度がひとつの目安となります。</p>
+
+    <h2>2. ローン復活を早めるためにできること</h2>
+    <p>信用情報の保有期間そのものを短くする方法はありませんが、期間が明けた後に「スムーズに審査に通る状態」を作っておくことは可能です。</p>
+
+    <h3>収入の安定と納税を継続する</h3>
+    <p>信用情報から事故記録が消えた後、金融機関が最初に見るのは「現在の支払い能力」です。この5年間のうちに、安定した収入を確保し、税金や社会保険料を遅滞なく納めておくことは、審査における大きなプラス評価に繋がります。</p>
+
+    <h3>過去にトラブルのない金融機関を選ぶ</h3>
+    <p>任意整理の対象にした会社（およびそのグループ会社）には、社内独自のデータベースに記録が残る「社内ブラック」という状態になるケースが多いです。ローン復活を目指す際は、過去に一度も取引やトラブルがない、全く別系列の金融機関を候補に選ぶのが定石です。</p>
+
+    <h2>3. 家計の管理能力を高める期間にする</h2>
+    <p>ローンが組めない期間を単なる「我慢の時期」ではなく、将来に備えた準備期間として活用しましょう。</p>
+
+    <h3>手元の現金だけでやりくりする習慣を作る</h3>
+    <p>ローンやリボ払いに頼らず、自分の持っている現金の範囲内で生活を完結させる習慣を身につけます。これにより、完済後も借金に依存しない安定した家計管理ができるようになります。</p>
+
+    <h3>頭金をコツコツ貯める</h3>
+    <p>返済が終わってからの5年間で、次のローンに向けた頭金を準備できます。自己資金の比率を高く準備しておくことで、5年後のローン審査の通過率を実質的に高めることができます。</p>
+
+    <!-- LINK-B -->
+    <div class="affiliate-box">
+      自分の場合いつ完済できるか、無料で確認できます →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <h2>4. 早期の手続きが、ローンの復活を早める</h2>
+    <p>「ローンが組めなくなるのが嫌だから」と、無理な返済を続けて解決を先送りにしていませんか？</p>
+    <p>実は、今の苦しい状況を放置して滞納してしまったり、数年後に限界を迎えてから手続きをしたりする方が、結果的に「完済の日」が後ろに倒れ、ローンを組めるようになる時期を遅らせてしまいます。</p>
+    <p><strong>「一日も早い手続きが、一日も早い完済と、ローン復活へのカウントダウン開始に繋がる」</strong>というのが、債務整理の現実的な側面です。</p>
+    <p>「自分の場合、いつ完済できて、いつから次のローンが検討できるのか」を、一度シミュレーションしてみませんか。プロの無料相談を活用して具体的なスケジュールを立てることで、今の漠然とした不安を「前向きな計画」に変えることができます。</p>
+
+    <!-- LINK-C -->
+    <div class="affiliate-box">
+      まずは無料相談だけでもいい →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <!-- バナー -->
+    <div class="banner-wrap">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+631SX" rel="nofollow">
+        <img border="0" width="468" height="60" alt="" src="https://www20.a8.net/svt/bgt?aid=260401157352&wid=001&eno=01&mid=s00000020704001022000&mc=1">
+      </a>
+      <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+631SX" alt="">
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/minami-story.html">このサイトについて</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/disclaimer.html">免責事項</a>
+  </div>
+  <p class="footer-copy">© 2026 しくじりマネー · 本サイトはアフィリエイト広告を含みます</p>
+</footer>
+
+</body>
+</html>
