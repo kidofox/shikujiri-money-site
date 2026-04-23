@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>任意整理すると官報に載る？載らない？｜しくじりマネー</title>
+<meta name="description" content="任意整理をしても官報に名前は載りません。官報が掲載されるのは自己破産・個人再生のみ。プライバシーを守りながら借金を整理する方法を解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a18;
+    --ink-soft: #4a4540;
+    --ink-muted: #8a8078;
+    --cream: #faf7f2;
+    --cream-deep: #f0ebe2;
+    --warm: #c8956a;
+    --warm-light: #e8c9a8;
+    --warm-pale: #f5ede0;
+    --night: #2a2420;
+    --serif: 'Noto Serif JP', serif;
+    --sans: 'Noto Sans JP', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  .ad-notice {
+    background: var(--cream-deep);
+    border-bottom: 1px solid var(--warm-light);
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  header {
+    padding: 40px 24px 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .site-logo {
+    font-family: var(--serif);
+    font-size: clamp(22px, 5vw, 28px);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+    display: block;
+  }
+
+  .site-logo span { color: var(--warm); }
+
+  .site-tagline {
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cream-deep);
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--warm); }
+
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .article-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--warm);
+    background: var(--warm-pale);
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .article-title {
+    font-family: var(--serif);
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+  }
+
+  .minami-card {
+    background: var(--warm-pale);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid var(--warm-light);
+    margin-bottom: 40px;
+  }
+
+  .minami-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream-deep);
+    border: 2px solid #fff;
+  }
+
+  .minami-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .minami-name {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+
+  .minami-role {
+    font-size: 11px;
+    color: var(--warm);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .minami-text {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  .affiliate-box {
+    background: #fff;
+    border: 1px solid var(--warm-light);
+    border-left: 3px solid var(--warm);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 32px 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .affiliate-box a {
+    color: var(--warm);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cream-deep);
+    letter-spacing: 0.04em;
+  }
+
+  .article-body h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 28px 0 10px;
+    color: var(--ink-soft);
+  }
+
+  .article-body p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: var(--ink-soft);
+  }
+
+  .article-body ul {
+    margin: 0 0 20px 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+
+  .article-body strong { color: var(--ink); font-weight: 500; }
+
+  .article-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 24px 0 32px;
+  }
+
+  .article-table th {
+    background: var(--warm-pale);
+    color: var(--ink-soft);
+    font-weight: 500;
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid var(--warm-light);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .article-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--cream-deep);
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .article-table tr:nth-child(even) td { background: var(--cream); }
+
+  .banner-wrap { text-align: center; margin: 40px 0; }
+
+  footer {
+    background: var(--night);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(232,224,213,0.5);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--warm-light); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(232,224,213,0.3);
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 480px) {
+    .minami-card { grid-template-columns: 1fr; }
+    .minami-avatar { margin: 0 auto; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJKN0FFSY1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FJKN0FFSY1');
+</script>
+</head>
+<body>
+
+<div class="ad-notice">PR・本サイトはアフィリエイト広告を含みます</div>
+
+<header>
+  <a href="/" class="site-logo">しくじり<span>マネー</span></a>
+  <p class="site-tagline">お金で失敗した私が、あなたに伝えたいこと</p>
+  <nav>
+    <a href="/debt-types.html">借金・債務整理</a>
+    <a href="/after-bankruptcy.html">自己破産</a>
+    <a href="/money/">お金の立て直し</a>
+    <a href="/minami-story.html">ミナミについて</a>
+    <a href="/contact/">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="article-wrap">
+
+  <span class="article-tag">任意整理・よくある疑問</span>
+  <h1 class="article-title">任意整理すると官報に載る？<br>載らない？</h1>
+
+  <div class="minami-card">
+    <div class="minami-avatar">
+      <img src="/assets/minami-cat.jpg" alt="ミナミ">
+    </div>
+    <div>
+      <p class="minami-name">ミナミ（美波）</p>
+      <p class="minami-role">元スピリチュアル鑑定士 / しくじり経験者</p>
+      <p class="minami-text">20代で債務整理、30歳で自己破産を経験。「官報に載ったらどうしよう」と怖くて調べ回った夜があります。この記事は、あの頃の私と同じ不安を抱えているあなたのために書きました。</p>
+    </div>
+  </div>
+
+  <!-- LINK-A -->
+  <div class="affiliate-box">
+    まず話だけ聞いてみる →
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+    <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+  </div>
+
+  <div class="article-body">
+
+    <p>借金の返済が苦しくなると、今の生活をどう立て直すべきか、頭の中がそれだけでいっぱいになってしまいますよね。解決策を調べていると「官報（かんぽう）」という言葉が出てくることがありますが、普段の生活ではまず聞き馴染みのない言葉だと思います。</p>
+    <p>結論から言えば、<strong>任意整理を選んだ場合、この官報にあなたの名前が出ることはありません。</strong>「誰かに知られたらどうしよう」と不安になるよりも、まずは借金の連鎖を止めることが先決です。今の生活を守りながら解決できる仕組みについて、整理してお話しします。</p>
+
+    <h2>1. そもそも「官報」とは何か？</h2>
+    <p>官報とは、国が毎日発行している広報誌のようなものです。法律の改正や裁判所の決定事項などが掲載されます。</p>
+
+    <h3>官報に名前が出るケース</h3>
+    <p>借金の整理において官報に情報が載るのは、裁判所を介して「借金を大幅に減額・免除」してもらう手続きをとった場合に限られるのが一般的です。</p>
+    <ul>
+      <li>自己破産</li>
+      <li>個人再生</li>
+    </ul>
+    <p>これらは公的な救済措置であるため、手続きをした事実が官報に記載される仕組みになっています。</p>
+
+    <h2>2. 任意整理なら「官報」には載りません</h2>
+    <p>任意整理は、裁判所を通さずに弁護士や司法書士が業者と直接交渉する手続きです。そのため、官報にあなたの住所や氏名が掲載されることはありません。</p>
+
+    <h3>名前が載る場所・載らない場所の比較</h3>
+
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>掲載場所</th>
+          <th>任意整理</th>
+          <th>自己破産・個人再生</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>官報（国の新聞）</td>
+          <td>載らない</td>
+          <td>載る</td>
+        </tr>
+        <tr>
+          <td>信用情報機関（いわゆるブラックリスト）</td>
+          <td>載る</td>
+          <td>載る</td>
+        </tr>
+        <tr>
+          <td>戸籍・住民票</td>
+          <td>載らない</td>
+          <td>載らない</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>任意整理であれば、周囲に知られる公的な記録は残らないと言われています。</p>
+
+    <h2>3. 官報を気にするよりも「今の返済」を止めるメリット</h2>
+    <p>「官報に載るかどうか」という小さな不安で立ち止まっている間にも、借金の利息は膨らみ続けてしまいます。大切なのは、今の苦しい状況から一日も早く抜け出すことです。</p>
+
+    <h3>周囲にバレる一番の原因は「放置」</h3>
+    <p>実は、手続きをして官報に載る（あるいは載らない）ことよりも、借金を放置して滞納が続くことの方が、周囲に知られるリスクは高いと言えます。返済が遅れれば、自宅に督促状が届いたり、最終的には給料の差し押さえなどで職場に連絡が行ったりする可能性があるからです。</p>
+
+    <h3>任意整理は「静かな解決」に向いています</h3>
+    <p>任意整理は、官報に載らないだけでなく、専門家に依頼した時点で業者からの直接連絡も止まるのが一般的です。「誰にも知られずに、でも着実に借金をゼロに近づけたい」という方にとって、非常に現実的でメリットの大きい選択肢だと言えるでしょう。</p>
+
+    <!-- LINK-B -->
+    <div class="affiliate-box">
+      業者からの連絡を止めて、静かに解決を始めませんか →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <h2>4. 確実なリスタートを切るために</h2>
+    <p>私が借金に追われていた頃、一番欲しかったのは「確実に返済が終わるという安心感」でした。聞き慣れない官報のような言葉に怯えるよりも、プロに今の状況を診てもらい、現実的なゴールを決めること。それが、暗闇から抜け出す唯一の道でした。</p>
+    <p>任意整理は、あなたのプライバシーを守りながら、無理のない範囲で生活を立て直すための強力な手段です。「自分の場合は官報を気にしなくていいのか」「どの方法が一番早く解決できるのか」といった疑問は、無料相談で専門家に直接聞いてみてください。一人で考え込むよりも、プロの回答を得ることで、驚くほど心が軽くなるはずです。</p>
+
+    <!-- LINK-C -->
+    <div class="affiliate-box">
+      まずは無料相談だけでもいい →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <!-- バナー -->
+    <div class="banner-wrap">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+631SX" rel="nofollow">
+        <img border="0" width="468" height="60" alt="" src="https://www20.a8.net/svt/bgt?aid=260401157352&wid=001&eno=01&mid=s00000020704001022000&mc=1">
+      </a>
+      <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+631SX" alt="">
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/minami-story.html">このサイトについて</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/disclaimer.html">免責事項</a>
+  </div>
+  <p class="footer-copy">© 2026 しくじりマネー · 本サイトはアフィリエイト広告を含みます</p>
+</footer>
+
+</body>
+</html>
