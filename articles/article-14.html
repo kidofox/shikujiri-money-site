@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>任意整理中にやってはいけない4つの禁忌｜しくじりマネー</title>
+<meta name="description" content="任意整理中に絶対やってはいけない4つの行動を解説。新たな借入れ・特定業者への返済・無断遅延・連絡無視は手続き失敗の原因になります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a18;
+    --ink-soft: #4a4540;
+    --ink-muted: #8a8078;
+    --cream: #faf7f2;
+    --cream-deep: #f0ebe2;
+    --warm: #c8956a;
+    --warm-light: #e8c9a8;
+    --warm-pale: #f5ede0;
+    --night: #2a2420;
+    --serif: 'Noto Serif JP', serif;
+    --sans: 'Noto Sans JP', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  .ad-notice {
+    background: var(--cream-deep);
+    border-bottom: 1px solid var(--warm-light);
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  header {
+    padding: 40px 24px 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .site-logo {
+    font-family: var(--serif);
+    font-size: clamp(22px, 5vw, 28px);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+    display: block;
+  }
+
+  .site-logo span { color: var(--warm); }
+
+  .site-tagline {
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cream-deep);
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--warm); }
+
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .article-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--warm);
+    background: var(--warm-pale);
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .article-title {
+    font-family: var(--serif);
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+  }
+
+  .minami-card {
+    background: var(--warm-pale);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid var(--warm-light);
+    margin-bottom: 40px;
+  }
+
+  .minami-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream-deep);
+    border: 2px solid #fff;
+  }
+
+  .minami-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .minami-name {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+
+  .minami-role {
+    font-size: 11px;
+    color: var(--warm);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .minami-text {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  .affiliate-box {
+    background: #fff;
+    border: 1px solid var(--warm-light);
+    border-left: 3px solid var(--warm);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 32px 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .affiliate-box a {
+    color: var(--warm);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cream-deep);
+    letter-spacing: 0.04em;
+  }
+
+  .article-body h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 28px 0 10px;
+    color: var(--ink-soft);
+  }
+
+  .article-body p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: var(--ink-soft);
+  }
+
+  .article-body ul {
+    margin: 0 0 20px 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+
+  .article-body strong { color: var(--ink); font-weight: 500; }
+
+  .article-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 24px 0 32px;
+  }
+
+  .article-table th {
+    background: var(--warm-pale);
+    color: var(--ink-soft);
+    font-weight: 500;
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid var(--warm-light);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .article-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--cream-deep);
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .article-table tr:nth-child(even) td { background: var(--cream); }
+
+  .banner-wrap { text-align: center; margin: 40px 0; }
+
+  footer {
+    background: var(--night);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(232,224,213,0.5);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--warm-light); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(232,224,213,0.3);
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 480px) {
+    .minami-card { grid-template-columns: 1fr; }
+    .minami-avatar { margin: 0 auto; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJKN0FFSY1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FJKN0FFSY1');
+</script>
+</head>
+<body>
+
+<div class="ad-notice">PR・本サイトはアフィリエイト広告を含みます</div>
+
+<header>
+  <a href="/" class="site-logo">しくじり<span>マネー</span></a>
+  <p class="site-tagline">お金で失敗した私が、あなたに伝えたいこと</p>
+  <nav>
+    <a href="/debt-types.html">借金・債務整理</a>
+    <a href="/after-bankruptcy.html">自己破産</a>
+    <a href="/money/">お金の立て直し</a>
+    <a href="/minami-story.html">ミナミについて</a>
+    <a href="/contact/">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="article-wrap">
+
+  <span class="article-tag">任意整理・手続き中の注意</span>
+  <h1 class="article-title">任意整理中にやってはいけない<br>4つの禁忌</h1>
+
+  <div class="minami-card">
+    <div class="minami-avatar">
+      <img src="/assets/minami-cat.jpg" alt="ミナミ">
+    </div>
+    <div>
+      <p class="minami-name">ミナミ（美波）</p>
+      <p class="minami-role">元スピリチュアル鑑定士 / しくじり経験者</p>
+      <p class="minami-text">20代で債務整理を経験しました。手続き中は「やっと督促が止まった」と安心しがちですが、そこが一番の落とし穴でした。守るべきルールを知っておくだけで、完済までの道が確実に変わります。</p>
+    </div>
+  </div>
+
+  <!-- LINK-A -->
+  <div class="affiliate-box">
+    まず話だけ聞いてみる →
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+    <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+  </div>
+
+  <div class="article-body">
+
+    <p>任意整理の手続きが始まると、督促が止まりホッと一安心する時期ですが、同時に「守らなければならないルール」も発生します。この時期に無意識にとってしまった行動が、最悪の場合、手続きの失敗や和解の取り消しを招くこともあります。せっかくの再スタートを台無しにしないために、任意整理中に「絶対にやってはいけないこと」をまとめました。</p>
+    <p>専門家が介入してから和解が成立し、完済するまでの間に注意すべきポイントは主に4つです。</p>
+
+    <h2>1. 新たな借入れ・カードの利用</h2>
+    <p>これが最も重要です。手続き中に「少しだけなら」と他社から借りたり、解約を免れたカードを使ったりしてはいけません。</p>
+    <p>新たな借入れが発覚すると、交渉中の業者が「返済能力がない」と判断し、和解に応じてくれなくなるリスクがあります。また、依頼している専門家との信頼関係も壊れ、辞任（サポート中止）される原因にもなり得ます。</p>
+
+    <h2>2. 特定の業者への「こっそり返済」</h2>
+    <p>「この会社だけは迷惑をかけたくないから」と、専門家を通さずに一部の業者にだけ返済を続けるのはNGです。</p>
+    <p>任意整理は債権者間の公平性が重視されます。特定の業者だけを優遇する行為は、他の業者との交渉を著しく困難にします。</p>
+
+    <h2>3. 支払いの「無断遅延」</h2>
+    <p>和解成立後、毎月の返済が始まってから最も注意すべきは遅延です。</p>
+    <p>多くの和解契約には「2回分以上滞納すると、残金を一括請求されても文句は言えない（期限の利益の喪失）」という条項が含まれています。一度でも遅れそうなときは、すぐに専門家へ相談してください。</p>
+
+    <h2>4. 専門家からの連絡を無視する</h2>
+    <p>手続き中は、書類の準備や方針の確認のため、事務所から連絡が来ることがあります。これを「面倒だから」「まだ返済が始まっていないから」と放置してしまうと、手続きが停滞し、最悪の場合「信頼関係の破綻」として契約を解除されてしまうことがあります。</p>
+
+    <h2>なぜ「やってはいけない」のか？その代償</h2>
+    <p>「少しのルール違反くらい大丈夫だろう」という甘い考えが、取り返しのつかない結果を招くことがあります。</p>
+
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>やってしまったこと</th>
+          <th>起こりうるリスク</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>新たな借入れ</td>
+          <td>和解の拒絶、専門家の辞任</td>
+        </tr>
+        <tr>
+          <td>返済の滞納</td>
+          <td>一括請求、差し押さえの再開</td>
+        </tr>
+        <tr>
+          <td>連絡の放置</td>
+          <td>手続きの強制終了、督促の再開</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>特に、専門家に辞任されてしまうと、止まっていた督促が翌日から一斉に再開されます。そうなると、次に依頼できる先を探すのは非常に困難になると言われています。</p>
+
+    <!-- LINK-B -->
+    <div class="affiliate-box">
+      手続き中の不安、プロに直接確認できます →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <h2>安全に完済まで走り抜けるための対策</h2>
+    <p>ルールを守ることは、あなた自身を守ることに直結します。無理なく手続きを続けるためのコツをお伝えします。</p>
+
+    <h3>家計を「現金管理」に切り替える</h3>
+    <p>カードが使えないことを不便に思うかもしれませんが、これを「借金体質を抜けるための訓練」と考えましょう。手元の現金の範囲で生活するリズムができれば、完済後の生活も安泰です。</p>
+
+    <h3>困ったときは「まず専門家に相談」</h3>
+    <p>どうしても急な出費が必要になった、あるいは返済が厳しくなった。そんな時は、独断で動く前に必ず依頼している専門家に連絡してください。支払いスケジュールの調整など、法的な観点から最善の策を一緒に考えてくれるはずです。</p>
+
+    <h2>任意整理は「終わらせる」ことがゴールです</h2>
+    <p>任意整理は、手続きを始めた時がスタートではありません。最後の1円を返し終えた時が、本当のゴールです。</p>
+    <p>「やってはいけないこと」を意識するのは窮屈に感じるかもしれませんが、それは数年後に「借金ゼロ」の晴れやかな空気を吸うための、必要不可欠なルールです。「今の自分の生活で、ルールを守り通せるか不安」「もし失敗してしまったら？」と心配な方もいるでしょう。まずは無料相談で、手続き中の具体的な生活の注意点について聞いてみてください。プロのアドバイスを受けることで、完済までの道のりがより明確で、確実なものになるはずです。</p>
+
+    <!-- LINK-C -->
+    <div class="affiliate-box">
+      まずは無料相談だけでもいい →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <!-- バナー -->
+    <div class="banner-wrap">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+631SX" rel="nofollow">
+        <img border="0" width="468" height="60" alt="" src="https://www20.a8.net/svt/bgt?aid=260401157352&wid=001&eno=01&mid=s00000020704001022000&mc=1">
+      </a>
+      <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+631SX" alt="">
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/minami-story.html">このサイトについて</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/disclaimer.html">免責事項</a>
+  </div>
+  <p class="footer-copy">© 2026 しくじりマネー · 本サイトはアフィリエイト広告を含みます</p>
+</footer>
+
+</body>
+</html>
