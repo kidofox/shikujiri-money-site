@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自己破産後の生活はどうなる？仕事・家・車への影響と再出発のリアル｜しくじりマネー</title>
+<meta name="description" content="自己破産後も仕事は続けられ、賃貸住宅にも住み続けられます。仕事・家・車への具体的な影響と、破産後の生活のリアルをわかりやすく解説します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a18;
+    --ink-soft: #4a4540;
+    --ink-muted: #8a8078;
+    --cream: #faf7f2;
+    --cream-deep: #f0ebe2;
+    --warm: #c8956a;
+    --warm-light: #e8c9a8;
+    --warm-pale: #f5ede0;
+    --night: #2a2420;
+    --serif: 'Noto Serif JP', serif;
+    --sans: 'Noto Sans JP', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  .ad-notice {
+    background: var(--cream-deep);
+    border-bottom: 1px solid var(--warm-light);
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  header {
+    padding: 40px 24px 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .site-logo {
+    font-family: var(--serif);
+    font-size: clamp(22px, 5vw, 28px);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+    display: block;
+  }
+
+  .site-logo span { color: var(--warm); }
+
+  .site-tagline {
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cream-deep);
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--warm); }
+
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .article-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--warm);
+    background: var(--warm-pale);
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+
+  .article-title {
+    font-family: var(--serif);
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+  }
+
+  .minami-card {
+    background: var(--warm-pale);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid var(--warm-light);
+    margin-bottom: 40px;
+  }
+
+  .minami-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream-deep);
+    border: 2px solid #fff;
+  }
+
+  .minami-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .minami-name {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 2px;
+  }
+
+  .minami-role {
+    font-size: 11px;
+    color: var(--warm);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .minami-text {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  .affiliate-box {
+    background: #fff;
+    border: 1px solid var(--warm-light);
+    border-left: 3px solid var(--warm);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 32px 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .affiliate-box a {
+    color: var(--warm);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .article-body h2 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cream-deep);
+    letter-spacing: 0.04em;
+  }
+
+  .article-body h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 28px 0 10px;
+    color: var(--ink-soft);
+  }
+
+  .article-body p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: var(--ink-soft);
+  }
+
+  .article-body ul {
+    margin: 0 0 20px 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+
+  .article-body strong { color: var(--ink); font-weight: 500; }
+
+  .article-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 24px 0 32px;
+  }
+
+  .article-table th {
+    background: var(--warm-pale);
+    color: var(--ink-soft);
+    font-weight: 500;
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid var(--warm-light);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .article-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--cream-deep);
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .article-table tr:nth-child(even) td { background: var(--cream); }
+
+  .banner-wrap { text-align: center; margin: 40px 0; }
+
+  footer {
+    background: var(--night);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(232,224,213,0.5);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--warm-light); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(232,224,213,0.3);
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 480px) {
+    .minami-card { grid-template-columns: 1fr; }
+    .minami-avatar { margin: 0 auto; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJKN0FFSY1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FJKN0FFSY1');
+</script>
+</head>
+<body>
+
+<div class="ad-notice">PR・本サイトはアフィリエイト広告を含みます</div>
+
+<header>
+  <a href="/" class="site-logo">しくじり<span>マネー</span></a>
+  <p class="site-tagline">お金で失敗した私が、あなたに伝えたいこと</p>
+  <nav>
+    <a href="/debt-types.html">借金・債務整理</a>
+    <a href="/after-bankruptcy.html">自己破産</a>
+    <a href="/money/">お金の立て直し</a>
+    <a href="/minami-story.html">ミナミについて</a>
+    <a href="/contact/">お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="article-wrap">
+
+  <span class="article-tag">自己破産・生活への影響</span>
+  <h1 class="article-title">自己破産後の生活はどうなる？<br>仕事・家・車への影響と<br>再出発のリアル</h1>
+
+  <div class="minami-card">
+    <div class="minami-avatar">
+      <img src="/assets/minami-cat.jpg" alt="ミナミ">
+    </div>
+    <div>
+      <p class="minami-name">ミナミ（美波）</p>
+      <p class="minami-role">元スピリチュアル鑑定士 / しくじり経験者</p>
+      <p class="minami-text">30歳で自己破産を経験しました。「生活がすべて壊れる」と怖かったけれど、実際に手続きを終えてみると、失ったものより取り戻したものの方がずっと大きかった。あの頃の私に、この記事を読ませてあげたかったです。</p>
+    </div>
+  </div>
+
+  <!-- LINK-A -->
+  <div class="affiliate-box">
+    まず話だけ聞いてみる →
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+    <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+  </div>
+
+  <div class="article-body">
+
+    <p>「自己破産をしたら、今の生活がすべて壊れてしまうのではないか」そう思って、なかなか一歩を踏み出せない方も多いと思います。</p>
+    <p>でも、実際の自己破産は、生活を壊すためのものではなく、無理が重なって回らなくなった家計をリセットして、当たり前の日常を取り戻すための手続きです。破産後に具体的に何が残り、何が変わるのか。仕事、家、車といった、私たちの生活に直結するポイントを整理して解説します。</p>
+
+    <h2>1. 仕事・収入への影響：今の仕事を辞める必要はありません</h2>
+    <p>一番気になる「職場にバレてクビになるのでは？」という点ですが、その心配はまずいりません。</p>
+
+    <h3>自己破産を理由に解雇はできない</h3>
+    <p>法律上、自己破産をしたことだけを理由に会社を辞めさせることは禁止されています。自分から話したりしない限り、周囲に知られるきっかけ自体がほとんどありません。</p>
+
+    <h3>特定の職種だけ、一時的な制限がある</h3>
+    <p>手続き中の数ヶ月間だけ、警備員や保険外交員、士業（弁護士・税理士など）など、一部の職業に就けない期間があります。ただし、手続きが終わればその制限も解除され、元の仕事に戻ることができます。</p>
+
+    <h3>退職金はどうなる？</h3>
+    <p>将来受け取る予定の退職金の一部を、資産として計算に含める必要があります。ただし、それによって今すぐ仕事を辞めなければならないといったことはありません。</p>
+
+    <h2>2. 住まい（持ち家・賃貸）への影響</h2>
+    <p>住む場所については、今の住居が「自分名義の持ち家」かどうかで大きく変わります。</p>
+
+    <h3>持ち家の場合</h3>
+    <p>残念ながら、自分名義の持ち家は手放すことになるのが一般的です。裁判所を通じて売却され、返済に充てられるからです。</p>
+
+    <h3>賃貸住宅の場合</h3>
+    <p>家賃を滞納していない限り、そのまま住み続けることができます。借金を理由に追い出されることはありません。ただし、次に引っ越す際、保証会社が「信販系（信用情報をチェックする会社）」だと審査に通りにくい場合があるため、物件選びには少しコツが必要になります。</p>
+
+    <h2>3. 車への影響：ローンの有無と価値が分かれ目</h2>
+    <p>車については、「ローンの残り」と「今の価値」で決まります。</p>
+
+    <table class="article-table">
+      <thead>
+        <tr>
+          <th>車の状態</th>
+          <th>処分の可能性</th>
+          <th>理由</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ローン支払い中</td>
+          <td>高い</td>
+          <td>ローン会社に所有権があるため、引き揚げられるケースがほとんどです。</td>
+        </tr>
+        <tr>
+          <td>完済済み・価値が低い</td>
+          <td>残せる</td>
+          <td>時価20万円以下の古い車などは、そのまま手元に残せることが多いです。</td>
+        </tr>
+        <tr>
+          <td>完済済み・価値が高い</td>
+          <td>高い</td>
+          <td>資産価値が高い高級車などは、返済に充てるために処分が必要になります。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- LINK-B -->
+    <div class="affiliate-box">
+      自分の車や仕事への影響、無料で確認できます →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <h2>4. 自己破産後の「お金」のリアルなルール</h2>
+    <p>手続きが終わった後の生活は、意外なほど普通です。</p>
+
+    <h3>すべての現金がなくなるわけではない</h3>
+    <p>「99万円以下の現金」や、冷蔵庫・洗濯機などの「生活に必要な家財道具」は手元に残せます。すべてを奪われて明日から生活できない、といったことはありません。</p>
+
+    <h3>クレジットカードが使えない期間（5〜7年程度）</h3>
+    <p>しばらくの間、自分名義でカードを作ったりローンを組んだりできなくなります。でも、これは「手元にあるお金だけでやりくりする」という健全な感覚を身につける期間でもあります。</p>
+
+    <h2>5. 終わりの見えない不安から、具体的な「再建」へ</h2>
+    <p>私が手続きをして一番の安心感を得たのは、毎月「支払日が来ること」を怯えて過ごす日々が終わったことでした。それまでは、カレンダーを見るたびに「来月は足りるか、再来月はどう回すか」と頭を悩ませていましたが、解決してからは、自分の給料をそのまま日々の食費や将来の蓄えに回せる。その「家計のコントロールが自分に戻ってきた感覚」に、心から納得できました。</p>
+    <p>「私の車は残せる？」「この仕事は続けられる？」といった具体的な疑問は、一人で抱え込まずに無料相談でプロに確認してみてください。正確なルールを知ることで、今の漠然とした不安が「これからの生活計画」に変わるはずです。</p>
+
+    <!-- LINK-C -->
+    <div class="affiliate-box">
+      まずは無料相談だけでもいい →
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" rel="nofollow">「後悔しない任意整理するなら！」</a>
+      <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YRHE" alt="">
+    </div>
+
+    <!-- バナー -->
+    <div class="banner-wrap">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+631SX" rel="nofollow">
+        <img border="0" width="468" height="60" alt="" src="https://www20.a8.net/svt/bgt?aid=260401157352&wid=001&eno=01&mid=s00000020704001022000&mc=1">
+      </a>
+      <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+631SX" alt="">
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/minami-story.html">このサイトについて</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/disclaimer.html">免責事項</a>
+  </div>
+  <p class="footer-copy">© 2026 しくじりマネー · 本サイトはアフィリエイト広告を含みます</p>
+</footer>
+
+</body>
+</html>
