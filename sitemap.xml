@@ -1,63 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://www.shikujiri-money.com/</loc>
+    <loc>https://shikujiri-money.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/minami-story.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-01.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-01.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-02.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-02.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-03.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-03.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-04.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-04.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-05.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-05.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-06.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-06.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-07.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-07.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-08.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-08.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-09.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-09.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-10.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.shikujiri-money.com/articles/article-10.html</loc>
+    <loc>https://shikujiri-money.com/articles/article-11.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://shikujiri-money.com/articles/article-12.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shikujiri-money.com/articles/article-13.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shikujiri-money.com/articles/article-14.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shikujiri-money.com/articles/article-15.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shikujiri-money.com/articles/article-16.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shikujiri-money.com/articles/article-17.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shikujiri-money.com/articles/article-18.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shikujiri-money.com/articles/article-19.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://shikujiri-money.com/articles/article-20.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
