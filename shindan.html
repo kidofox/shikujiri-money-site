@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>借金・返済 かんたん診断 | しくじりマネー</title>
+<meta name="description" content="年収と借金の総額を入力するだけ。今の状況を数字で見える化して、一歩踏み出すヒントをお届けします。無料・匿名・登録不要。">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJKN0FFSY1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FJKN0FFSY1');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a18;
+    --ink-soft: #4a4540;
+    --ink-muted: #8a8078;
+    --cream: #faf7f2;
+    --cream-deep: #f0ebe2;
+    --warm: #c8956a;
+    --warm-light: #e8c9a8;
+    --warm-pale: #f5ede0;
+    --night: #2a2420;
+    --serif: 'Noto Serif JP', serif;
+    --sans: 'Noto Sans JP', sans-serif;
+    --danger: #c0392b;
+    --caution: #c8956a;
+    --safe: #6a9e7f;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.6;
+  }
+
+  .ad-notice {
+    background: var(--cream-deep);
+    border-bottom: 1px solid var(--warm-light);
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  header {
+    padding: 40px 24px 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .site-logo {
+    font-family: var(--serif);
+    font-size: clamp(22px, 5vw, 28px);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+    display: block;
+  }
+
+  .site-logo span { color: var(--warm); }
+
+  .site-tagline {
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.12em;
+    margin-top: 4px;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cream-deep);
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--warm); }
+
+  /* ── PAGE INTRO ── */
+  .page-intro {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 0;
+  }
+
+  .page-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--warm);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .page-title {
+    font-family: var(--serif);
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+
+  .page-title em {
+    font-style: normal;
+    color: var(--warm);
+    border-bottom: 1px solid var(--warm-light);
+  }
+
+  .page-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 2;
+    max-width: 560px;
+    margin-bottom: 8px;
+  }
+
+  .page-note {
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── FORM CARD ── */
+  .form-wrap {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 0 24px;
+  }
+
+  .form-card {
+    background: #fff;
+    border: 1px solid var(--cream-deep);
+    border-radius: 14px;
+    padding: 40px 36px;
+  }
+
+  @media (max-width: 480px) {
+    .form-card { padding: 28px 20px; }
+  }
+
+  .form-section-title {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--cream-deep);
+    letter-spacing: 0.04em;
+  }
+
+  .field-group {
+    margin-bottom: 28px;
+  }
+
+  .field-label {
+    display: block;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .field-label .required {
+    font-size: 10px;
+    color: var(--warm);
+    margin-left: 6px;
+    letter-spacing: 0.1em;
+  }
+
+  .field-label .optional {
+    font-size: 10px;
+    color: var(--ink-muted);
+    margin-left: 6px;
+    letter-spacing: 0.1em;
+  }
+
+  .field-hint {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  .input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-wrap .unit {
+    position: absolute;
+    right: 14px;
+    font-size: 13px;
+    color: var(--ink-muted);
+    pointer-events: none;
+  }
+
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 13px 48px 13px 16px;
+    border: 1px solid var(--cream-deep);
+    border-radius: 8px;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--ink);
+    background: var(--cream);
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+
+  input[type="number"]:focus,
+  select:focus {
+    border-color: var(--warm-light);
+    box-shadow: 0 0 0 3px rgba(200,149,106,0.1);
+  }
+
+  input[type="number"]::placeholder {
+    color: var(--warm-light);
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  /* lender count select */
+  select {
+    padding-right: 16px;
+    cursor: pointer;
+  }
+
+  .divider-line {
+    height: 1px;
+    background: var(--cream-deep);
+    margin: 28px 0;
+  }
+
+  /* ── SUBMIT ── */
+  .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: var(--warm);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    text-align: center;
+  }
+
+  .btn-submit:hover {
+    background: #b07850;
+    transform: translateY(-1px);
+  }
+
+  .btn-submit:active { transform: translateY(0); }
+
+  .submit-note {
+    text-align: center;
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-top: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── RESULT ── */
+  #result-section {
+    display: none;
+    max-width: 720px;
+    margin: 0 auto 56px;
+    padding: 0 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .result-card {
+    background: #fff;
+    border: 1px solid var(--cream-deep);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .result-header {
+    padding: 28px 36px 24px;
+    border-bottom: 1px solid var(--cream-deep);
+  }
+
+  @media (max-width: 480px) {
+    .result-header { padding: 20px; }
+  }
+
+  .result-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--warm);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .result-title {
+    font-family: var(--serif);
+    font-size: clamp(18px, 4vw, 22px);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+
+  /* ── COMPARISON GRID ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--cream-deep);
+  }
+
+  @media (max-width: 480px) {
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .compare-col {
+    background: #fff;
+    padding: 28px 28px 24px;
+  }
+
+  @media (max-width: 480px) {
+    .compare-col { padding: 20px; }
+  }
+
+  .compare-col.highlight {
+    background: var(--warm-pale);
+  }
+
+  .compare-col-label {
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+
+  .compare-item {
+    margin-bottom: 16px;
+  }
+
+  .compare-item-name {
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin-bottom: 2px;
+  }
+
+  .compare-item-value {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+
+  .compare-item-value.danger { color: var(--danger); }
+  .compare-item-value.caution { color: var(--caution); }
+  .compare-item-value.safe { color: var(--safe); }
+
+  .compare-item-sub {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-top: 2px;
+  }
+
+  /* ── MINAMI MESSAGE ── */
+  .minami-message {
+    padding: 28px 36px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    align-items: start;
+    background: var(--warm-pale);
+    border-top: 1px solid var(--warm-light);
+  }
+
+  @media (max-width: 480px) {
+    .minami-message { padding: 20px; gap: 14px; }
+  }
+
+  .minami-msg-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--cream-deep);
+    border: 2px solid #fff;
+    flex-shrink: 0;
+  }
+
+  .minami-msg-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .minami-msg-name {
+    font-size: 12px;
+    color: var(--warm);
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  .minami-msg-text {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+
+  .minami-msg-text strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ── CTA ── */
+  .result-cta {
+    padding: 28px 36px 36px;
+    border-top: 1px solid var(--cream-deep);
+  }
+
+  @media (max-width: 480px) {
+    .result-cta { padding: 20px; }
+  }
+
+  .cta-lead {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  .btn-cta {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: var(--warm);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-cta:hover {
+    background: #b07850;
+    transform: translateY(-1px);
+  }
+
+  .btn-cta-sub {
+    font-size: 11px;
+    display: block;
+    margin-top: 4px;
+    opacity: 0.85;
+  }
+
+  .cta-note {
+    font-size: 11px;
+    color: var(--ink-muted);
+    text-align: center;
+    margin-top: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .btn-retry {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--ink-muted);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    background: none;
+    border: none;
+    width: 100%;
+    letter-spacing: 0.04em;
+  }
+
+  .btn-retry:hover { color: var(--warm); }
+
+  /* ── INFO BLOCK ── */
+  .info-block {
+    max-width: 720px;
+    margin: 0 auto 56px;
+    padding: 0 24px;
+  }
+
+  .info-card {
+    background: var(--cream-deep);
+    border-radius: 10px;
+    padding: 24px 28px;
+  }
+
+  .info-card p {
+    font-size: 12px;
+    color: var(--ink-muted);
+    line-height: 2;
+  }
+
+  /* ── FOOTER ── */
+  .night-message {
+    background: var(--night);
+    color: #e8e0d5;
+    padding: 64px 24px;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .night-message::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 100%, rgba(200,149,106,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .night-message-inner { position: relative; z-index: 1; }
+
+  .night-stars {
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: rgba(200,149,106,0.5);
+    margin-bottom: 20px;
+  }
+
+  .night-title {
+    font-family: var(--serif);
+    font-size: clamp(20px, 4vw, 28px);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    letter-spacing: 0.06em;
+  }
+
+  .night-body {
+    font-size: 13px;
+    color: rgba(232,224,213,0.7);
+    line-height: 2;
+    max-width: 480px;
+    margin: 0 auto 32px;
+  }
+
+  .night-sns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .night-sns a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    border: 1px solid rgba(200,149,106,0.4);
+    border-radius: 4px;
+    color: rgba(232,224,213,0.85);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .night-sns a:hover {
+    border-color: var(--warm);
+    color: var(--warm-light);
+  }
+
+  footer {
+    background: var(--night);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    color: rgba(232,224,213,0.5);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--warm-light); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(232,224,213,0.3);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── STATUS BADGE ── */
+  .status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .status-badge.danger { background: #fdeaea; color: var(--danger); }
+  .status-badge.caution { background: var(--warm-pale); color: var(--caution); }
+  .status-badge.safe { background: #eaf3ef; color: var(--safe); }
+
+  /* progress bar */
+  .progress-bar-wrap {
+    margin: 6px 0 2px;
+    height: 6px;
+    background: var(--cream-deep);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1s ease;
+  }
+
+  .progress-bar-fill.danger { background: var(--danger); }
+  .progress-bar-fill.caution { background: var(--caution); }
+  .progress-bar-fill.safe { background: var(--safe); }
+</style>
+</head>
+<body>
+
+<div class="ad-notice">PR・本サイトはアフィリエイト広告を含みます</div>
+
+<header>
+  <a href="/" class="site-logo">しくじり<span>マネー</span></a>
+  <p class="site-tagline">お金で失敗した私が、あなたに伝えたいこと</p>
+  <nav>
+    <a href="/debt-types.html">借金・債務整理</a>
+    <a href="/after-bankruptcy.html">自己破産</a>
+    <a href="/money/">お金の立て直し</a>
+    <a href="/minami-story.html">ミナミについて</a>
+    <a href="/contact/">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- PAGE INTRO -->
+<div class="page-intro">
+  <p class="page-eyebrow">借金しくじり度チェック</p>
+  <h1 class="page-title" style="font-size: clamp(34px, 8vw, 52px); line-height: 1.3; margin-bottom: 14px;">借金<br><em>しくじり度</em><br>チェック</h1>
+  <p style="font-family: var(--serif); font-size: clamp(14px, 3vw, 17px); color: var(--ink-soft); letter-spacing: 0.06em; margin-bottom: 16px; line-height: 1.8;">いまの返済状況を、数字で見てみる。</p>
+  <p class="page-desc">
+    「どのくらい深刻なんだろう」——そのモヤモヤを、いちど数字にしてみましょう。<br>
+    入力は4項目だけ。個人情報は不要です。
+  </p>
+  <p class="page-note">※ 本ツールの結果は参考情報です。法的アドバイスではありません。</p>
+</div>
+
+<!-- FORM -->
+<div class="form-wrap" id="form-section">
+  <div class="form-card">
+    <p class="form-section-title">あなたの状況を教えてください</p>
+
+    <!-- 年収 -->
+    <div class="field-group">
+      <label class="field-label" for="income">
+        年収（手取り）<span class="required">必須</span>
+      </label>
+      <p class="field-hint">だいたいで大丈夫です。手取り年収を万円単位で入力してください。</p>
+      <div class="input-wrap">
+        <input type="number" id="income" placeholder="例：200" min="0" max="9999">
+        <span class="unit">万円</span>
+      </div>
+    </div>
+
+    <!-- 借金総額 -->
+    <div class="field-group">
+      <label class="field-label" for="debt">
+        借金の総額<span class="required">必須</span>
+      </label>
+      <p class="field-hint">すべての借入（カードローン・消費者金融・クレカ等）を合計してください。</p>
+      <div class="input-wrap">
+        <input type="number" id="debt" placeholder="例：150" min="0" max="9999">
+        <span class="unit">万円</span>
+      </div>
+    </div>
+
+    <!-- 業者数 -->
+    <div class="field-group">
+      <label class="field-label" for="lenders">
+        借入先の数<span class="required">必須</span>
+      </label>
+      <p class="field-hint">いくつの業者（銀行・カード会社・消費者金融など）から借りていますか？</p>
+      <select id="lenders">
+        <option value="" disabled selected>選んでください</option>
+        <option value="1">1社</option>
+        <option value="2">2社</option>
+        <option value="3">3社</option>
+        <option value="4">4〜5社</option>
+        <option value="5">6社以上</option>
+      </select>
+    </div>
+
+    <div class="divider-line"></div>
+
+    <!-- 月々返済額（任意） -->
+    <div class="field-group">
+      <label class="field-label" for="monthly">
+        月々の返済額<span class="optional">任意</span>
+      </label>
+      <p class="field-hint">わかる場合だけ入力してください。未入力の場合は借金総額から自動で概算します。</p>
+      <div class="input-wrap">
+        <input type="number" id="monthly" placeholder="例：3（万円）" min="0" max="999">
+        <span class="unit">万円</span>
+      </div>
+    </div>
+
+    <button class="btn-submit" onclick="calculate()">診断する（無料・匿名）</button>
+    <p class="submit-note">登録不要・入力情報はどこにも送信されません</p>
+  </div>
+</div>
+
+<!-- RESULT -->
+<div id="result-section">
+  <div class="result-card">
+
+    <!-- ヘッダー -->
+    <div class="result-header">
+      <p class="result-label">診断結果</p>
+      <div id="status-badge-wrap"></div>
+      <h2 class="result-title" id="result-title"></h2>
+    </div>
+
+    <!-- 比較グリッド -->
+    <div class="compare-grid">
+      <!-- 今の状況 -->
+      <div class="compare-col">
+        <p class="compare-col-label">▌ 今の家計</p>
+
+        <div class="compare-item">
+          <p class="compare-item-name">月の手取り（概算）</p>
+          <p class="compare-item-value" id="monthly-income-val">—</p>
+        </div>
+
+        <div class="compare-item">
+          <p class="compare-item-name">月の返済額（概算）</p>
+          <p class="compare-item-value" id="monthly-repay-val">—</p>
+        </div>
+
+        <div class="compare-item">
+          <p class="compare-item-name">返済比率</p>
+          <p class="compare-item-value" id="ratio-val">—</p>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="ratio-bar" style="width:0%"></div>
+          </div>
+          <p class="compare-item-sub" id="ratio-comment"></p>
+        </div>
+
+        <div class="compare-item">
+          <p class="compare-item-name">このまま完済するまで</p>
+          <p class="compare-item-value" id="payoff-val">—</p>
+          <p class="compare-item-sub" id="payoff-sub"></p>
+        </div>
+      </div>
+
+      <!-- もし借金がなかったら -->
+      <div class="compare-col highlight">
+        <p class="compare-col-label">✦ 借金がなかったら</p>
+
+        <div class="compare-item">
+          <p class="compare-item-name">毎月手元に残るお金</p>
+          <p class="compare-item-value safe" id="freed-monthly-val">—</p>
+          <p class="compare-item-sub">返済分がそのまま自由になります</p>
+        </div>
+
+        <div class="compare-item">
+          <p class="compare-item-name">1年間で増えるお金</p>
+          <p class="compare-item-value safe" id="freed-yearly-val">—</p>
+        </div>
+
+        <div class="compare-item">
+          <p class="compare-item-name">完済後の生活</p>
+          <p class="compare-item-value" style="font-size:15px;" id="freed-life-val">—</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ミナミのひとこと -->
+    <div class="minami-message">
+      <div class="minami-msg-avatar">
+        <img src="/assets/minami-cat.jpg" alt="ミナミ">
+      </div>
+      <div>
+        <p class="minami-msg-name">ミナミより</p>
+        <p class="minami-msg-text" id="minami-comment"></p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="result-cta">
+      <p class="cta-lead" id="cta-lead"></p>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YJRM" rel="nofollow" class="btn-cta" target="_blank" rel="noopener">
+        無料で専門家に相談してみる
+        <span class="btn-cta-sub">全国対応・何度でも無料・秘密厳守</span>
+      </a>
+      <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B1ATH+5TKLPU+4FR4+5YJRM" alt="" style="display:none;">
+      <p class="cta-note">※ 相談するだけで費用は一切かかりません</p>
+      <button class="btn-retry" onclick="retry()">▲ もう一度入力し直す</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- 注意書き -->
+<div class="info-block" id="info-block">
+  <div class="info-card">
+    <p>
+      ※ 本ツールの計算結果はあくまで参考値です。返済比率・完済年数は利率や返済方法によって異なります。<br>
+      ※ 入力された情報は診断のみに使用され、外部への送信・保存は一切行いません。<br>
+      ※ 具体的な解決策については、弁護士・司法書士への無料相談をお勧めします。
+    </p>
+  </div>
+</div>
+
+<!-- SEO TEXT BLOCK -->
+<div style="max-width:720px; margin: 0 auto 56px; padding: 0 24px;">
+  <div style="background: var(--warm-pale); border: 1px solid var(--warm-light); border-radius: 12px; padding: 32px 36px; display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: start;">
+    <div style="width:64px; height:64px; border-radius:50%; overflow:hidden; background:var(--cream-deep); border:2px solid #fff; flex-shrink:0;">
+      <img src="/assets/minami-cat.jpg" alt="ミナミ" style="width:100%; height:100%; object-fit:cover; object-position:top center;">
+    </div>
+    <div>
+      <p style="font-size:12px; color:var(--warm); letter-spacing:0.08em; margin-bottom:10px;">ミナミから、このツールを使ってくれたあなたへ</p>
+      <p style="font-size:13px; color:var(--ink-soft); line-height:2.1;">
+        借金の返済が苦しい、毎月の返済額を減らしたい——そう感じている方はぜひ一度、今の返済状況を数字で確認してみてください。
+        <strong style="color:var(--ink); font-weight:500;">任意整理・個人再生・自己破産</strong>といった<strong style="color:var(--ink); font-weight:500;">債務整理</strong>の制度を使えば、月々の返済を大幅に減らせる可能性があります。
+        「借金がいくらから相談できるの？」「弁護士や司法書士に頼むとお金かかるの？」——そんな疑問も含めて、<strong style="color:var(--ink); font-weight:500;">無料相談</strong>で全部聞けます。
+        私自身、20代で債務整理・30歳で自己破産を経験しました。早く動いた人ほど、楽になるのも早かった。
+        <strong style="color:var(--ink); font-weight:500;">借金問題は一人で抱えないでください。</strong>国の制度と、頼れる専門家が、必ずあなたの力になれます。
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- NIGHT MESSAGE -->
+<section class="night-message">
+  <div class="night-message-inner">
+    <p class="night-stars">· · ·</p>
+    <h2 class="night-title">今日も、お疲れ様でした。</h2>
+    <p class="night-body">
+      お金のことで眠れない夜、ありますよね。<br>
+      私もそういう夜を、何度も過ごしました。<br>
+      毎晩SNSで声をかけています。よかったら来てください。
+    </p>
+    <div class="night-sns">
+      <a href="https://www.youtube.com/@shikujiri-money" target="_blank" rel="noopener">▶ YouTube</a>
+      <a href="https://www.tiktok.com/@shikujiri_money" target="_blank" rel="noopener">◈ TikTok</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="/minami-story.html">このサイトについて</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="/disclaimer.html">免責事項</a>
+  </div>
+  <p class="footer-copy">© 2026 しくじりマネー · 本サイトはアフィリエイト広告を含みます</p>
+</footer>
+
+<script>
+  // ── 計算 ──
+  function calculate() {
+    const income = parseFloat(document.getElementById('income').value);
+    const debt = parseFloat(document.getElementById('debt').value);
+    const lenders = document.getElementById('lenders').value;
+    const monthlyInput = parseFloat(document.getElementById('monthly').value);
+
+    // バリデーション
+    if (!income || income <= 0) { alert('年収を入力してください。'); return; }
+    if (!debt || debt <= 0) { alert('借金の総額を入力してください。'); return; }
+    if (!lenders) { alert('借入先の数を選択してください。'); return; }
+
+    // 月収（手取り年収÷12）
+    const monthlyIncome = income / 12;
+
+    // 月々返済額：入力あれば優先、なければ借金総額×3%（年利18%相当の概算）
+    const monthlyRepay = (!isNaN(monthlyInput) && monthlyInput > 0)
+      ? monthlyInput
+      : debt * 0.03;
+
+    // 返済比率
+    const ratio = (monthlyRepay / monthlyIncome) * 100;
+
+    // 完済年数（利息なし概算／実態は長くなる）
+    const payoffMonths = monthlyRepay > 0 ? Math.ceil((debt * 10000) / (monthlyRepay * 10000)) : 999;
+    const payoffYears = Math.floor(payoffMonths / 12);
+    const payoffRemMonths = payoffMonths % 12;
+
+    // ステータス判定
+    let status, statusLabel, resultTitle, minamiComment, ctaLead;
+
+    if (ratio >= 35) {
+      status = 'danger';
+      statusLabel = '⚠ 要注意';
+      resultTitle = '返済の負担が、かなり重い状態です。';
+      minamiComment = `返済比率が<strong>${ratio.toFixed(0)}%</strong>というのは、正直、一人で抱えるには重すぎる数字です。私も同じような状況のとき、「なんとかなる」と思い込んで先延ばしにしてしまいました。でも、早く動いた人ほど、楽になるのも早かった。今日、専門家に話を聞いてもらうだけでいいんです。`;
+      ctaLead = `このまま返済を続けると、${payoffYears > 0 ? payoffYears + '年' + (payoffRemMonths > 0 ? payoffRemMonths + 'ヶ月' : '') : payoffMonths + 'ヶ月'}以上かかる計算です。国の制度を使えば、月々の負担を減らせる可能性があります。まず話だけでも聞いてみませんか。`;
+    } else if (ratio >= 20) {
+      status = 'caution';
+      statusLabel = '△ 注意が必要';
+      resultTitle = '返済負担が収入の2割を超えています。';
+      minamiComment = `返済比率<strong>${ratio.toFixed(0)}%</strong>、正直ちょっとしんどい水準ですよね。今はなんとか回っていても、急な出費や収入の減少があると一気につらくなります。「まだ大丈夫」と思える今のうちに、選択肢を知っておくだけでも違います。`;
+      ctaLead = `今すぐ手続きが必要というわけではありませんが、状況を専門家に聞いてもらうだけで気持ちが楽になることもあります。相談は無料なので、一度だけ話してみてください。`;
+    } else {
+      status = 'safe';
+      statusLabel = '○ 比較的安定';
+      resultTitle = '今のところ、返済は管理できている水準です。';
+      minamiComment = `返済比率<strong>${ratio.toFixed(0)}%</strong>は、今のところ許容範囲内です。でも、借入先が複数ある場合は金利を見直すだけで返済総額がかなり変わることがあります。「問題ないから大丈夫」ではなく、今だからこそ専門家に一度チェックしてもらうのが得策です。`;
+      ctaLead = `今の状況を改善できる可能性があります。無料相談で、あなたに合った選択肢を一緒に考えてもらいましょう。`;
+    }
+
+    // 解放後の価値
+    const freedMonthly = monthlyRepay;
+    const freedYearly = freedMonthly * 12;
+    const freedLife = freedYearly >= 100
+      ? '年間' + freedYearly.toFixed(0) + '万円、\n自由に使えます'
+      : '毎月' + freedMonthly.toFixed(1) + '万円、\n自分のために使えます';
+
+    // 表示
+    document.getElementById('form-section').style.display = 'none';
+    document.getElementById('info-block').style.display = 'none';
+
+    const resultSection = document.getElementById('result-section');
+    resultSection.style.display = 'block';
+
+    // バッジ
+    document.getElementById('status-badge-wrap').innerHTML =
+      `<span class="status-badge ${status}">${statusLabel}</span>`;
+
+    document.getElementById('result-title').textContent = resultTitle;
+
+    // 比較値
+    document.getElementById('monthly-income-val').textContent =
+      '月 ' + monthlyIncome.toFixed(1) + ' 万円';
+
+    const repayEl = document.getElementById('monthly-repay-val');
+    repayEl.textContent = '月 ' + monthlyRepay.toFixed(1) + ' 万円';
+    repayEl.className = 'compare-item-value ' + status;
+
+    const ratioEl = document.getElementById('ratio-val');
+    ratioEl.textContent = ratio.toFixed(0) + '%';
+    ratioEl.className = 'compare-item-value ' + status;
+
+    const ratioBar = document.getElementById('ratio-bar');
+    ratioBar.className = 'progress-bar-fill ' + status;
+    setTimeout(() => { ratioBar.style.width = Math.min(ratio, 100) + '%'; }, 100);
+
+    document.getElementById('ratio-comment').textContent =
+      ratio >= 35 ? '※ 一般的に35%超は危険水域とされています'
+      : ratio >= 20 ? '※ 一般的に25%超から負担が重くなります'
+      : '※ 一般的に20%以内が安心水準とされています';
+
+    document.getElementById('payoff-val').textContent =
+      payoffYears > 0
+        ? payoffYears + '年' + (payoffRemMonths > 0 ? payoffRemMonths + 'ヶ月' : '')
+        : payoffMonths + 'ヶ月';
+
+    document.getElementById('payoff-sub').textContent =
+      '※ 利息なし・現在の返済額継続の場合の概算';
+
+    document.getElementById('freed-monthly-val').textContent =
+      '月 +' + freedMonthly.toFixed(1) + ' 万円';
+    document.getElementById('freed-yearly-val').textContent =
+      '年 +' + freedYearly.toFixed(0) + ' 万円';
+    document.getElementById('freed-life-val').textContent =
+      freedYearly >= 100
+        ? '年間 ' + freedYearly.toFixed(0) + '万円を\n自由に使えます'
+        : '毎月 ' + freedMonthly.toFixed(1) + '万円を\n自分のために使えます';
+
+    document.getElementById('minami-comment').innerHTML = minamiComment;
+    document.getElementById('cta-lead').textContent = ctaLead;
+
+    resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function retry() {
+    document.getElementById('result-section').style.display = 'none';
+    document.getElementById('form-section').style.display = 'block';
+    document.getElementById('info-block').style.display = 'block';
+    document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+</body>
+</html>
