@@ -109,7 +109,6 @@
   }
   nav a:hover { color: var(--warm); }
 
-  /* ── PAGE INTRO ── */
   .page-intro {
     max-width: 720px;
     margin: 0 auto;
@@ -153,7 +152,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* ── FORM CARD ── */
   .form-wrap {
     max-width: 720px;
     margin: 40px auto;
@@ -261,7 +259,6 @@
     -webkit-appearance: none;
   }
 
-  /* lender count select */
   select {
     padding-right: 16px;
     cursor: pointer;
@@ -273,7 +270,6 @@
     margin: 28px 0;
   }
 
-  /* ── SUBMIT ── */
   .btn-submit {
     display: block;
     width: 100%;
@@ -306,7 +302,6 @@
     letter-spacing: 0.04em;
   }
 
-  /* ── RESULT ── */
   #result-section {
     display: none;
     max-width: 720px;
@@ -352,7 +347,6 @@
     line-height: 1.5;
   }
 
-  /* ── COMPARISON GRID ── */
   .compare-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -412,7 +406,6 @@
     margin-top: 2px;
   }
 
-  /* ── MINAMI MESSAGE ── */
   .minami-message {
     padding: 28px 36px;
     display: grid;
@@ -462,7 +455,6 @@
     font-weight: 500;
   }
 
-  /* ── CTA ── */
   .result-cta {
     padding: 28px 36px 36px;
     border-top: 1px solid var(--cream-deep);
@@ -531,7 +523,6 @@
 
   .btn-retry:hover { color: var(--warm); }
 
-  /* ── INFO BLOCK ── */
   .info-block {
     max-width: 720px;
     margin: 0 auto 56px;
@@ -550,7 +541,6 @@
     line-height: 2;
   }
 
-  /* ── FOOTER ── */
   .night-message {
     background: var(--night);
     color: #e8e0d5;
@@ -652,7 +642,6 @@
     letter-spacing: 0.08em;
   }
 
-  /* ── STATUS BADGE ── */
   .status-badge {
     display: inline-block;
     padding: 4px 12px;
@@ -667,7 +656,6 @@
   .status-badge.caution { background: var(--warm-pale); color: var(--caution); }
   .status-badge.safe { background: #eaf3ef; color: var(--safe); }
 
-  /* progress bar */
   .progress-bar-wrap {
     margin: 6px 0 2px;
     height: 6px;
@@ -703,7 +691,6 @@
   </nav>
 </header>
 
-<!-- PAGE INTRO -->
 <div class="page-intro">
   <p class="page-eyebrow">借金しくじり度チェック</p>
   <h1 class="page-title" style="font-size: clamp(34px, 8vw, 52px); line-height: 1.3; margin-bottom: 14px;">借金<br><em>しくじり度</em><br>チェック</h1>
@@ -715,12 +702,10 @@
   <p class="page-note">※ 本ツールの結果は参考情報です。法的アドバイスではありません。</p>
 </div>
 
-<!-- FORM -->
 <div class="form-wrap" id="form-section">
   <div class="form-card">
     <p class="form-section-title">あなたの状況を教えてください</p>
 
-    <!-- 年収 -->
     <div class="field-group">
       <label class="field-label" for="income">
         年収（手取り）<span class="required">必須</span>
@@ -732,7 +717,6 @@
       </div>
     </div>
 
-    <!-- 借金総額 -->
     <div class="field-group">
       <label class="field-label" for="debt">
         借金の総額<span class="required">必須</span>
@@ -744,7 +728,6 @@
       </div>
     </div>
 
-    <!-- 業者数 -->
     <div class="field-group">
       <label class="field-label" for="lenders">
         借入先の数<span class="required">必須</span>
@@ -762,7 +745,6 @@
 
     <div class="divider-line"></div>
 
-    <!-- 月々返済額（任意） -->
     <div class="field-group">
       <label class="field-label" for="monthly">
         月々の返済額<span class="optional">任意</span>
@@ -779,20 +761,16 @@
   </div>
 </div>
 
-<!-- RESULT -->
 <div id="result-section">
   <div class="result-card">
 
-    <!-- ヘッダー -->
     <div class="result-header">
       <p class="result-label">診断結果</p>
       <div id="status-badge-wrap"></div>
       <h2 class="result-title" id="result-title"></h2>
     </div>
 
-    <!-- 比較グリッド -->
     <div class="compare-grid">
-      <!-- 今の状況 -->
       <div class="compare-col">
         <p class="compare-col-label">▌ 今の家計</p>
 
@@ -822,7 +800,6 @@
         </div>
       </div>
 
-      <!-- もし借金がなかったら -->
       <div class="compare-col highlight">
         <p class="compare-col-label">✦ 借金がなかったら</p>
 
@@ -844,7 +821,6 @@
       </div>
     </div>
 
-    <!-- ミナミのひとこと -->
     <div class="minami-message">
       <div class="minami-msg-avatar">
         <img src="/assets/minami-cat.jpg" alt="ミナミ">
@@ -855,7 +831,6 @@
       </div>
     </div>
 
-    <!-- CTA -->
     <div class="result-cta">
       <p class="cta-lead" id="cta-lead"></p>
       <a href="https://px.a8.net/svt/ejp?a8mat=4B1ATH+5TKLPU+4FR4+5YJRM" rel="nofollow" class="btn-cta" target="_blank" rel="noopener">
@@ -870,7 +845,6 @@
   </div>
 </div>
 
-<!-- 注意書き -->
 <div class="info-block" id="info-block">
   <div class="info-card">
     <p>
@@ -881,7 +855,6 @@
   </div>
 </div>
 
-<!-- SEO TEXT BLOCK -->
 <div style="max-width:720px; margin: 0 auto 56px; padding: 0 24px;">
   <div style="background: var(--warm-pale); border: 1px solid var(--warm-light); border-radius: 12px; padding: 32px 36px; display: grid; grid-template-columns: 64px 1fr; gap: 20px; align-items: start;">
     <div style="width:64px; height:64px; border-radius:50%; overflow:hidden; background:var(--cream-deep); border:2px solid #fff; flex-shrink:0;">
@@ -900,7 +873,6 @@
   </div>
 </div>
 
-<!-- NIGHT MESSAGE -->
 <section class="night-message">
   <div class="night-message-inner">
     <p class="night-stars">· · ·</p>
@@ -927,78 +899,66 @@
 </footer>
 
 <script>
-  // ── 計算 ──
   function calculate() {
     const income = parseFloat(document.getElementById('income').value);
     const debt = parseFloat(document.getElementById('debt').value);
     const lenders = document.getElementById('lenders').value;
     const monthlyInput = parseFloat(document.getElementById('monthly').value);
 
-    // バリデーション
     if (!income || income <= 0) { alert('年収を入力してください。'); return; }
     if (!debt || debt <= 0) { alert('借金の総額を入力してください。'); return; }
     if (!lenders) { alert('借入先の数を選択してください。'); return; }
 
-    // 月収（手取り年収÷12）
     const monthlyIncome = income / 12;
-
-    // 月々返済額：入力あれば優先、なければ借金総額×3%（年利18%相当の概算）
     const monthlyRepay = (!isNaN(monthlyInput) && monthlyInput > 0)
       ? monthlyInput
       : debt * 0.03;
 
-    // 返済比率
     const ratio = (monthlyRepay / monthlyIncome) * 100;
 
-    // 完済年数（利息なし概算／実態は長くなる）
     const payoffMonths = monthlyRepay > 0 ? Math.ceil((debt * 10000) / (monthlyRepay * 10000)) : 999;
     const payoffYears = Math.floor(payoffMonths / 12);
     const payoffRemMonths = payoffMonths % 12;
 
-    // ステータス判定
     let status, statusLabel, resultTitle, minamiComment, ctaLead;
 
     if (ratio >= 35) {
       status = 'danger';
       statusLabel = '⚠ 要注意';
       resultTitle = '返済の負担が、かなり重い状態です。';
-      minamiComment = `返済比率が<strong>${ratio.toFixed(0)}%</strong>というのは、正直、一人で抱えるには重すぎる数字です。私も同じような状況のとき、「なんとかなる」と思い込んで先延ばしにしてしまいました。でも、早く動いた人ほど、楽になるのも早かった。今日、専門家に話を聞いてもらうだけでいいんです。`;
+      minamiComment = `正直、この状態ってかなりしんどいですよね。<br><br>私も同じような状況のとき、「まだ大丈夫」って思って動けませんでした。でも、その間にどんどん状況が悪くなっていったんです。<br><br>あとから振り返ると、「もっと早く相談しておけばよかった」って本気で思いました。<br><br>今すぐ何かを決める必要はないので、一度だけ状況を見てもらうだけでも全然違いますよ。`;
       ctaLead = `このまま返済を続けると、${payoffYears > 0 ? payoffYears + '年' + (payoffRemMonths > 0 ? payoffRemMonths + 'ヶ月' : '') : payoffMonths + 'ヶ月'}以上かかる計算です。国の制度を使えば、月々の負担を減らせる可能性があります。まず話だけでも聞いてみませんか。`;
     } else if (ratio >= 20) {
       status = 'caution';
       statusLabel = '△ 注意が必要';
       resultTitle = '返済負担が収入の2割を超えています。';
-      minamiComment = `返済比率<strong>${ratio.toFixed(0)}%</strong>、正直ちょっとしんどい水準ですよね。今はなんとか回っていても、急な出費や収入の減少があると一気につらくなります。「まだ大丈夫」と思える今のうちに、選択肢を知っておくだけでも違います。`;
+      minamiComment = `今はなんとか回っているかもしれませんが、この状態って少しずつ負担が積み重なっていくラインです。<br><br>私も「まだ大丈夫」と思って動かなかった結果、気づいた時には余裕がなくなっていました。<br><br>早い段階で状況を知っておくだけで、選べる選択肢はかなり変わります。<br><br>今のうちに、一度だけ確認してみてもいいと思いますよ。`;
       ctaLead = `今すぐ手続きが必要というわけではありませんが、状況を専門家に聞いてもらうだけで気持ちが楽になることもあります。相談は無料なので、一度だけ話してみてください。`;
     } else {
       status = 'safe';
       statusLabel = '○ 比較的安定';
       resultTitle = '今のところ、返済は管理できている水準です。';
-      minamiComment = `返済比率<strong>${ratio.toFixed(0)}%</strong>は、今のところ許容範囲内です。でも、借入先が複数ある場合は金利を見直すだけで返済総額がかなり変わることがあります。「問題ないから大丈夫」ではなく、今だからこそ専門家に一度チェックしてもらうのが得策です。`;
+      minamiComment = `今のところ大きな問題はなさそうですが、この状態でも油断してしまうと少しずつ負担が増えていくことがあります。<br><br>私も「大丈夫なうち」に何もせず、あとから後悔したことがあります。<br><br>今の状況だからこそ、一度だけプロに見てもらうことで安心できることも多いです。<br><br>問題が大きくなる前に、軽くチェックしてみるのも一つの選択ですよ。`;
       ctaLead = `今の状況を改善できる可能性があります。無料相談で、あなたに合った選択肢を一緒に考えてもらいましょう。`;
     }
 
-    // 解放後の価値
     const freedMonthly = monthlyRepay;
     const freedYearly = freedMonthly * 12;
     const freedLife = freedYearly >= 100
       ? '年間' + freedYearly.toFixed(0) + '万円、\n自由に使えます'
       : '毎月' + freedMonthly.toFixed(1) + '万円、\n自分のために使えます';
 
-    // 表示
     document.getElementById('form-section').style.display = 'none';
     document.getElementById('info-block').style.display = 'none';
 
     const resultSection = document.getElementById('result-section');
     resultSection.style.display = 'block';
 
-    // バッジ
     document.getElementById('status-badge-wrap').innerHTML =
       `<span class="status-badge ${status}">${statusLabel}</span>`;
 
     document.getElementById('result-title').textContent = resultTitle;
 
-    // 比較値
     document.getElementById('monthly-income-val').textContent =
       '月 ' + monthlyIncome.toFixed(1) + ' 万円';
 
