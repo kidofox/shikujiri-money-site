@@ -328,7 +328,7 @@
 
   .pillar-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
@@ -371,7 +371,23 @@
     line-height: 1.8;
   }
 
-  /* ── 診断ツール導線バナー ── */
+  .pillar-card.pillar-card--dark {
+    background: var(--warm);
+    border-color: #b07850;
+  }
+
+  .pillar-card.pillar-card--dark:hover {
+    border-color: #8a5c38;
+    transform: translateY(-2px);
+  }
+
+  .pillar-card.pillar-card--dark .pillar-name {
+    color: #fff;
+  }
+
+  .pillar-card.pillar-card--dark .pillar-desc {
+    color: rgba(255,255,255,0.85);
+  }
   .shindan-banner {
     max-width: 720px;
     margin: 0 auto 48px;
@@ -641,33 +657,11 @@
       「誰にも言えない」そのお金の悩み、<br>
       ここでなら話せると思ってもらえたら。
     </p>
-    <a href="/shindan.html" class="btn-primary">無料で状況を確認する</a>
+    <a href="/shindan.html" class="btn-primary">30秒でわかる、あなたの借金レベル</a>
     <a href="/minami-story.html" class="btn-ghost">ミナミのしくじり話を読む →</a>
   </div>
   <div class="hero-image fade-in">
     <img src="/assets/minami-main.jpg" alt="ミナミ（美波）">
-  </div>
-</section>
-
-<div class="divider">CONTENTS</div>
-
-<!-- MINAMI INTRO -->
-<section class="minami-section">
-  <div class="minami-card">
-    <div class="minami-avatar">
-      <img src="/assets/minami-cat.jpg" alt="ミナミのアイコン">
-    </div>
-    <div>
-      <p class="minami-name">ミナミ（美波）</p>
-      <p class="minami-role">元スピリチュアル鑑定士 / しくじり経験者</p>
-      <p class="minami-text">
-        20代前半、元カレのために借金して<strong>債務整理</strong>。<br>
-        30歳、店舗経営の失敗で<strong>自己破産</strong>。<br><br>
-        「あー、それ私もやっちゃいました（笑）」<br>
-        笑えるようになるまで時間はかかったけれど、<br>
-        やり直せました。あなたも、きっと大丈夫。
-      </p>
-    </div>
   </div>
 </section>
 
@@ -676,15 +670,15 @@
 <!-- CONTENT PILLARS -->
 <section class="pillars">
   <p class="section-label">About this site</p>
-  <h2 class="section-title">しくじりマネーで<br>できること</h2>
+  <h2 class="section-title">このサイトでわかること</h2>
 
   <div class="pillar-grid">
-    <a href="/debt-types.html" class="pillar-card">
+    <a href="/knowledge.html" class="pillar-card">
       <span class="pillar-icon">🌿</span>
       <p class="pillar-name">借金・債務整理</p>
-      <p class="pillar-desc">任意整理・個人再生・特定調停。国の制度でできることを、経験者の視点で解説します。</p>
+      <p class="pillar-desc">借金問題の解決方法を、種類・費用・手順まで経験者目線でまとめました。</p>
     </a>
-    <a href="/after-bankruptcy.html" class="pillar-card">
+    <a href="/knowledge.html" class="pillar-card">
       <span class="pillar-icon">🌙</span>
       <p class="pillar-name">自己破産</p>
       <p class="pillar-desc">破産後の生活、信用情報、再スタートの現実。怖くない、ちゃんと先はあります。</p>
@@ -692,24 +686,17 @@
     <a href="/minami-story.html" class="pillar-card">
       <span class="pillar-icon">🌱</span>
       <p class="pillar-name">ミナミのしくじり話</p>
-      <p class="pillar-desc">20代で債務整理、30歳で自己破産。私の経験がそのままここにあります。</p>
+      <p class="pillar-desc">私のしくじりを、あなたの「次の一歩」に。</p>
+    </a>
+    <a href="/shindan.html" class="pillar-card pillar-card--dark">
+      <span class="pillar-icon">📊</span>
+      <p class="pillar-name">借金レベル診断</p>
+      <p class="pillar-desc">30秒でわかる、あなたの返済状況。無料・匿名・登録不要。</p>
     </a>
   </div>
 </section>
 
 <div class="divider">ARTICLES</div>
-
-<!-- 診断ツール導線バナー -->
-<div class="shindan-banner">
-  <div class="shindan-banner-inner">
-    <div>
-      <p class="shindan-banner-label">借金しくじり度チェック</p>
-      <p class="shindan-banner-title">いまの返済状況を、<br>数字で見てみませんか？</p>
-      <p class="shindan-banner-sub">4項目を入力するだけ・無料・匿名・登録不要</p>
-    </div>
-    <a href="/shindan.html" class="shindan-banner-btn">診断してみる →</a>
-  </div>
-</div>
 
 <!-- ARTICLES -->
 <section class="articles">
@@ -787,34 +774,47 @@
       </div>
       <span class="article-arrow">›</span>
     </a>
-  </div>
-</section>
-
-<!-- NIGHT MESSAGE -->
-<section class="night-message">
-  <div class="night-message-inner">
-    <p class="night-stars">· · ·</p>
-    <h2 class="night-title">今日も、お疲れ様でした。</h2>
-    <p class="night-body">
-      お金のことで眠れない夜、ありますよね。<br>
-      私もそういう夜を、何度も過ごしました。<br>
-      毎晩SNSで声をかけています。よかったら来てください。
-    </p>
-    <div class="night-sns">
-      <a href="https://www.youtube.com/@shikujiri-money" target="_blank" rel="noopener">▶ YouTube</a>
-      <a href="https://www.tiktok.com/@shikujiri_money" target="_blank" rel="noopener">◈ TikTok</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-links">
-    <a href="/minami-story.html">このサイトについて</a>
-    <a href="/privacy.html">プライバシーポリシー</a>
-    <a href="/disclaimer.html">免責事項</a>
-  </div>
-  <p class="footer-copy">© 2026 しくじりマネー · 本サイトはアフィリエイト広告を含みます</p>
-</footer>
-
-</body>
-</html>
+    <a href="/articles/article-11.html" class="article-item">
+      <div>
+        <span class="article-tag">借金・債務整理</span>
+        <p class="article-title">任意整理すると官報に載る？載らない？</p>
+      </div>
+      <span class="article-arrow">›</span>
+    </a>
+    <a href="/articles/article-12.html" class="article-item">
+      <div>
+        <span class="article-tag">借金・債務整理</span>
+        <p class="article-title">任意整理後、ローンは何年組めない？</p>
+      </div>
+      <span class="article-arrow">›</span>
+    </a>
+    <a href="/articles/article-13.html" class="article-item">
+      <div>
+        <span class="article-tag">自己破産</span>
+        <p class="article-title">自己破産したら名前は検索できる？バレる？</p>
+      </div>
+      <span class="article-arrow">›</span>
+    </a>
+    <a href="/articles/article-14.html" class="article-item">
+      <div>
+        <span class="article-tag">借金・債務整理</span>
+        <p class="article-title">任意整理中にやってはいけないこと</p>
+      </div>
+      <span class="article-arrow">›</span>
+    </a>
+    <a href="/articles/article-15.html" class="article-item">
+      <div>
+        <span class="article-tag">借金・債務整理</span>
+        <p class="article-title">過払い金請求とは？自分に関係ある？</p>
+      </div>
+      <span class="article-arrow">›</span>
+    </a>
+    <a href="/articles/article-16.html" class="article-item">
+      <div>
+        <span class="article-tag">借金・債務整理</span>
+        <p class="article-title">債務整理にかかる費用は？弁護士・司法書士の違い</p>
+      </div>
+      <span class="article-arrow">›</span>
+    </a>
+    <a href="/articles/article-17.html" class="article-item">
+      <div>
